@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question": "What are the first ten amendments to the Constitution called?",
+    "correctAnswer": "The Bill of Rights"
+  },
+  {
+    "id": 2,
+    "question": "What is the supreme law of the land?",
+    "correctAnswer": "The Constitution"
+  },
+  {
+    "id": 3,
+    "question": "Name one branch or part of the government.",
+    "correctAnswer": "Congress"
+  }
+]
