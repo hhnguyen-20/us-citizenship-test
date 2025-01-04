@@ -43,6 +43,12 @@ export default function Navbar() {
             Meaning
           </Link>
           <Link
+            href="/information"
+            className="rounded px-3 py-2 font-medium text-white transition hover:bg-indigo-500"
+          >
+            Information
+          </Link>
+          <Link
             href="/mocktest"
             className="rounded px-3 py-2 font-medium text-white transition hover:bg-indigo-500"
           >

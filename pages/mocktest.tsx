@@ -6,6 +6,7 @@ import civicsData from "../data/CivicsTest.json";
 import meaningData from "../data/MeaningTest.json";
 import readingAndWritingData from "../data/ReadingAndWritingTest.json";
 import yesNoData from "../data/YesNoTest.json";
+import informationData from "../data/InformationTest.json";
 // Utils
 import { getVoices, getDesiredVoice, speakText, shuffleArray } from "@/utils/common";
 
@@ -14,7 +15,7 @@ import { getVoices, getDesiredVoice, speakText, shuffleArray } from "@/utils/com
  * For reading/writing, we'll store question = reading, answer = writing by default
  * But we STILL want a special layout for that type.
  */
-type QuestionType = "civics" | "meaning" | "yesno" | "readingwriting";
+type QuestionType = "civics" | "meaning" | "yesno" | "readingwriting" | "information";
 
 interface MockQuestion {
   id: number;
@@ -66,9 +67,17 @@ export default function MockTest() {
       answer: item.writing,     // The "writing" text
     }));
 
-    const yesNoSubset = yesNoData.slice(0, 5).map((item: any) => ({
+    const yesNoSubset = yesNoData.slice(0, 10).map((item: any) => ({
       id: item.id,
       type: "yesno" as const,
+      question: item.question,
+      answer: item.answer,
+    }));
+
+    // 10 questions from InformationTest.json
+    const informationSubset = informationData.slice(0, 10).map((item: any) => ({
+      id: item.id,
+      type: "information" as const,
       question: item.question,
       answer: item.answer,
     }));
@@ -79,6 +88,7 @@ export default function MockTest() {
       ...meaningSubset,
       ...readingWritingSubset,
       ...yesNoSubset,
+      ...informationSubset,
     ];
     combined = shuffleArray(combined);
 

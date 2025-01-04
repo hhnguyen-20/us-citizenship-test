@@ -8,6 +8,7 @@ export default function Home() {
     <section className="relative flex flex-col items-center justify-center gap-8 py-20 text-center bg-gray-50 overflow-hidden min-h-screen">
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-20 z-0" />
+
       {/* Hero background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -28,6 +29,7 @@ export default function Home() {
 
       {/* Cards */}
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Civics */}
         <div className="rounded bg-white p-4 shadow transition-transform hover:shadow-lg hover:scale-105">
           <h2 className="mb-2 text-xl font-semibold text-indigo-600">Civics</h2>
           <p className="mb-2 text-sm text-gray-600">
@@ -40,6 +42,8 @@ export default function Home() {
             Practice Now
           </Link>
         </div>
+
+        {/* Yes/No */}
         <div className="rounded bg-white p-4 shadow transition-transform hover:shadow-lg hover:scale-105">
           <h2 className="mb-2 text-xl font-semibold text-green-600">Yes/No</h2>
           <p className="mb-2 text-sm text-gray-600">
@@ -52,6 +56,8 @@ export default function Home() {
             Practice Now
           </Link>
         </div>
+
+        {/* Reading & Writing */}
         <div className="rounded bg-white p-4 shadow transition-transform hover:shadow-lg hover:scale-105">
           <h2 className="mb-2 text-xl font-semibold text-blue-600">Reading &amp; Writing</h2>
           <p className="mb-2 text-sm text-gray-600">
@@ -64,6 +70,8 @@ export default function Home() {
             Practice Now
           </Link>
         </div>
+
+        {/* Meaning */}
         <div className="rounded bg-white p-4 shadow transition-transform hover:shadow-lg hover:scale-105">
           <h2 className="mb-2 text-xl font-semibold text-purple-600">Meaning</h2>
           <p className="mb-2 text-sm text-gray-600">
@@ -72,6 +80,20 @@ export default function Home() {
           <Link
             href="/meaning"
             className="inline-block rounded bg-purple-600 px-4 py-2 text-white transition-colors hover:bg-purple-500"
+          >
+            Practice Now
+          </Link>
+        </div>
+
+        {/* Information */}
+        <div className="rounded bg-white p-4 shadow transition-transform hover:shadow-lg hover:scale-105">
+          <h2 className="mb-2 text-xl font-semibold text-yellow-600">Information</h2>
+          <p className="mb-2 text-sm text-gray-600">
+            Prepare for the personal information section of the interview.
+          </p>
+          <Link
+            href="/information"
+            className="inline-block rounded bg-yellow-600 px-4 py-2 text-white transition-colors hover:bg-yellow-500"
           >
             Practice Now
           </Link>
