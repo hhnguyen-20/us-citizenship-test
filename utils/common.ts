@@ -13,16 +13,25 @@ export function getDesiredVoice(
   lang = "en-US",
   nameKeyword = "google"
 ): SpeechSynthesisVoice | undefined {
-  // Attempt to find a voice matching both lang and "google"
+  // 1) Attempt to find a "Google" voice in en-US
   const googleVoice = voices.find(
-    (v) => v.lang === lang && v.name.toLowerCase().includes(nameKeyword)
+    (voice) => voice.lang === lang && voice.name.toLowerCase().includes(nameKeyword)
   );
-  
-  if (googleVoice) return googleVoice;
-  
-  // If no "google" voice is found, just pick the first matching language
-  const fallbackVoice = voices.find((v) => v.lang === lang);
-  return fallbackVoice;
+  if (googleVoice) {
+    return googleVoice;
+  }
+
+  // 2) If no Google voice is found, try "Samantha" for Safari
+  // (since iOS/Mac Safari typically includes a voice named "Samantha" for en-US)
+  const safariVoice = voices.find(
+    (voice) => voice.lang === lang && voice.name.toLowerCase().includes("samantha")
+  );
+  if (safariVoice) {
+    return safariVoice;
+  }
+
+  // 3) Otherwise, just pick the first en-US voice found
+  return voices.find((voice) => voice.lang === lang);
 }
 
 export function speakText(text: string, voice?: SpeechSynthesisVoice) {
