@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import yesNoTest from "../../data/YesNoTest.json";
+import yesNoTest from "../data/YesNoTest.json";
+import { getVoices, getDesiredVoice, speakText } from "@/utils/common";
 
 export default function YesNoPractice() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,9 +13,12 @@ export default function YesNoPractice() {
   const questionText = currentItem?.question || "No question found.";
   const possibleAnswer = currentItem?.answer || "No answer found.";
 
+  // On first access, or if voices haven't loaded yet, this may return an empty array
+  const voices = getVoices();
+  const desiredVoice = getDesiredVoice(voices, "en-US", "google");
+
   const speakQuestion = () => {
-    const utterance = new SpeechSynthesisUtterance(questionText);
-    window.speechSynthesis.speak(utterance);
+    speakText(questionText, desiredVoice);
   };
 
   const handleShowAnswer = () => setShowAnswer(true);

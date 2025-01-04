@@ -16,7 +16,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Nav (visible at md and above, hidden below md) */}
+        {/* Desktop Nav (md and above) */}
         <nav className="hidden space-x-4 md:flex">
           <Link
             href="/civics"
@@ -50,7 +50,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile Hamburger Button (hidden at md and above, block below md) */}
+        {/* Mobile Hamburger Button (below md) */}
         <button
           className="text-white md:hidden"
           onClick={() => setIsOpen(!isOpen)}

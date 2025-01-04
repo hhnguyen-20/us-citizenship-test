@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import readingAndWritingTest from "../../data/ReadingAndWritingTest.json";
+import readingAndWritingTest from "../data/ReadingAndWritingTest.json";
+import { getVoices, getDesiredVoice, speakText } from "@/utils/common";
 
 export default function ReadingAndWriting() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,16 +13,16 @@ export default function ReadingAndWriting() {
   const readingSentence = currentItem?.reading || "No reading found.";
   const writingSentence = currentItem?.writing || "No writing found.";
 
-  // Speak reading sentence
+  // On first access, or if voices haven't loaded yet, this may return an empty array
+  const voices = getVoices();
+  const desiredVoice = getDesiredVoice(voices, "en-US", "google");
+
   const speakReading = () => {
-    const utterance = new SpeechSynthesisUtterance(readingSentence);
-    window.speechSynthesis.speak(utterance);
+    speakText(readingSentence, desiredVoice);
   };
 
-  // Speak writing sentence
   const speakWriting = () => {
-    const utterance = new SpeechSynthesisUtterance(writingSentence);
-    window.speechSynthesis.speak(utterance);
+    speakText(writingSentence, desiredVoice);
   };
 
   // Show correct writing

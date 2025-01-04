@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import meaningTest from "../../data/MeaningTest.json";
+import meaningTest from "../data/MeaningTest.json";
+import { getVoices, getDesiredVoice, speakText } from "@/utils/common";
 
 export default function MeaningTest() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,16 +13,16 @@ export default function MeaningTest() {
   const meaning = currentItem?.meaning || "No meaning found.";
   const questionText = `Can you explain what "${word}" means?`;
 
-  // Reading question
+  // On first access, or if voices haven't loaded yet, this may return an empty array
+  const voices = getVoices();
+  const desiredVoice = getDesiredVoice(voices, "en-US", "google");
+
   const speakQuestion = () => {
-    const utterance = new SpeechSynthesisUtterance(questionText);
-    window.speechSynthesis.speak(utterance);
+    speakText(questionText, desiredVoice);
   };
 
-  // Reading answer
   const speakAnswer = () => {
-    const utterance = new SpeechSynthesisUtterance(meaning);
-    window.speechSynthesis.speak(utterance);
+    speakText(meaning, desiredVoice);
   };
 
   // Show the meaning
