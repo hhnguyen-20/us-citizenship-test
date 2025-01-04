@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 // Data
-import civicsData from "../../data/CivicsTest.json";
-import meaningData from "../../data/MeaningTest.json";
-import readingAndWritingData from "../../data/ReadingAndWritingTest.json";
-import yesNoData from "../../data/YesNoTest.json";
+import civicsData from "../data/CivicsTest.json";
+import meaningData from "../data/MeaningTest.json";
+import readingAndWritingData from "../data/ReadingAndWritingTest.json";
+import yesNoData from "../data/YesNoTest.json";
+// Utils
+import { getVoices, getDesiredVoice, speakText, shuffleArray } from "@/utils/common";
 
 /**
  * We'll unify all question types under a single shape.
@@ -35,6 +37,10 @@ export default function MockTest() {
   // Additional states for reading/writing format
   const [userWriting, setUserWriting] = useState("");
   const [showCorrectWriting, setShowCorrectWriting] = useState(false);
+
+  // On first access, or if voices haven't loaded yet, this may return an empty array
+  const voices = getVoices();
+  const desiredVoice = getDesiredVoice(voices, "en-US", "google");
 
   // On mount, slice & shuffle data
   useEffect(() => {
@@ -78,22 +84,6 @@ export default function MockTest() {
 
     setQuestions(combined);
   }, []);
-
-  /** Shuffle function (Fisher-Yates) */
-  function shuffleArray(arr: MockQuestion[]): MockQuestion[] {
-    const newArr = [...arr];
-    for (let i = newArr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
-    }
-    return newArr;
-  }
-
-  // Generic speak function for any text
-  const speak = (text: string) => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
-  };
 
   // Reset reading/writing state
   const resetReadingWriting = () => {
@@ -160,7 +150,7 @@ export default function MockTest() {
             <h2 className="mb-2 text-xl font-semibold text-gray-800">Read the sentence</h2>
             <p className="mb-2 rounded bg-gray-100 p-2 text-gray-700">{currentQ.question}</p>
             <button
-              onClick={() => speak(currentQ.question)}
+              onClick={() => speakText(currentQ.question, desiredVoice)}
               className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
             >
               Read Aloud
@@ -171,7 +161,7 @@ export default function MockTest() {
           <div className="mb-6">
             <h2 className="mb-2 text-xl font-semibold text-gray-800">Write the sentence</h2>
             <button
-              onClick={() => speak(currentQ.answer)}
+              onClick={() => speakText(currentQ.answer, desiredVoice)}
               className="mr-4 rounded bg-green-600 px-4 py-2 font-bold text-white transition-colors hover:bg-green-500"
             >
               Hear Writing Sentence
@@ -212,7 +202,7 @@ export default function MockTest() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <button
-              onClick={() => speak(currentQ.question)}
+              onClick={() => speakText(currentQ.question, desiredVoice)}
               className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
             >
               Read Question
@@ -231,7 +221,7 @@ export default function MockTest() {
               <p className="mt-2 rounded bg-gray-100 p-2 text-gray-700">{currentQ.answer}</p>
 
               <button
-                onClick={() => speak(currentQ.answer)}
+                onClick={() => speakText(currentQ.answer, desiredVoice)}
                 className="mt-2 rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
               >
                 Read Answer

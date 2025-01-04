@@ -1,40 +1,27 @@
 "use client";
 
 import React, { useState } from "react";
-import CivicsTest from "../../data/CivicsTest.json";
-
-type CivicsQuestion = {
-  id: number;
-  question: string;
-  answer: string;
-};
+import CivicsTest from "@/data/CivicsTest.json";
+import { getVoices, getDesiredVoice, speakText } from "@/utils/common";
 
 export default function Civics() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
 
-  // Current question details
-  const currentQuestion: CivicsQuestion | undefined = CivicsTest[currentQuestionIndex];
+  const currentQuestion = CivicsTest[currentQuestionIndex];
   const questionId = currentQuestion?.id ?? 0;
-  const questionText = currentQuestion?.question || "No question found.";
-  const correctAnswer = currentQuestion?.answer || "No answer found.";
+  const questionText = currentQuestion?.question ?? "No question found.";
+  const correctAnswer = currentQuestion?.answer ?? "No answer found.";
 
-  // Speak question aloud
-  const speakQuestion = () => {
-    const utterance = new SpeechSynthesisUtterance(questionText);
-    window.speechSynthesis.speak(utterance);
-  };
+  // Speech
+  const voices = getVoices();
+  const desiredVoice = getDesiredVoice(voices, "en-US", "google");
 
-  // Speak answer aloud
-  const speakAnswer = () => {
-    const utterance = new SpeechSynthesisUtterance(correctAnswer);
-    window.speechSynthesis.speak(utterance);
-  };
+  const speakQuestion = () => speakText(questionText, desiredVoice);
+  const speakAnswer = () => speakText(correctAnswer, desiredVoice);
 
   // Show answer
-  const handleShowAnswer = () => {
-    setShowAnswer(true);
-  };
+  const handleShowAnswer = () => setShowAnswer(true);
 
   // Navigation
   const prevQuestion = () => {
@@ -52,11 +39,7 @@ export default function Civics() {
   };
 
   if (!currentQuestion) {
-    return (
-      <div className="p-6 text-red-500">
-        No questions available.
-      </div>
-    );
+    return <div className="p-6 text-red-500">No questions available.</div>;
   }
 
   return (
@@ -95,7 +78,9 @@ export default function Civics() {
         {/* Show Answer */}
         {showAnswer && (
           <div className="mt-4 border-t pt-4">
-            <h2 className="text-lg font-semibold text-gray-800">Possible Correct Answer:</h2>
+            <h2 className="text-lg font-semibold text-gray-800">
+              Possible Correct Answer:
+            </h2>
             <p className="mt-2 rounded bg-gray-100 p-2 text-gray-700">
               {correctAnswer}
             </p>

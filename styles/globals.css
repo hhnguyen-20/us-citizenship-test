@@ -5,3 +5,70 @@
 #gradient-canvas {
   background: linear-gradient(135deg, #ffba27, #7038ff);
 }
+
+/* General Footer Styling */
+.footer {
+  background-color: #222; /* Dark background */
+  color: #ddd; /* Light text color */
+  padding: 10px 0; /* Smaller padding */
+  font-family: Arial, sans-serif;
+  text-align: center; /* Center all content */
+  font-size: 0.8rem; /* Smaller text */
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #00bcd4; /* Accent color */
+}
+
+/* Angular Repo Section */
+.github-repo {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  display: inline-flex; /* Align all inline elements */
+  align-items: center;  /* Vertical centering */
+  gap: 5px;             /* Space between elements */
+}
+
+.github-repo p {
+  margin: 0;
+}
+
+.github-link {
+  display: inline-flex; /* Align icons and text */
+  align-items: center;
+  gap: 3px;             /* Space between text and icons */
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.github-star-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px; /* Minimal space */
+  font-weight: bold;
+  color: #ffca28;
+}
+
+.github-star-badge svg {
+  vertical-align: middle; /* Align icons vertically */
+  fill: #ffca28;          /* Gold color for star */
+  transition: transform 0.3s ease;
+}
+
+/* Footer Text */
+.footer-text strong {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.7rem;
+  }
+}
