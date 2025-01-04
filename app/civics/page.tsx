@@ -1,156 +1,139 @@
 "use client";
 
-import "regenerator-runtime/runtime";
-import { useState, useEffect } from "react";
-import civicsQuestions from "../../data/civicsQuestions.json";
-import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
-// import { generateContent } from "@/utils/genAI";
+import React, { useState } from "react";
+import CivicsTest from "../../data/CivicsTest.json";
 
-const Civics: React.FC = () => {
-  const [answer, setAnswer] = useState<string>("");
-  const [submitted, setSubmitted] = useState<boolean>(false);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const [isBrowserSupported, setIsBrowserSupported] = useState<boolean>(true);
-  const { transcript, resetTranscript } = useSpeechRecognition();
+type CivicsQuestion = {
+  id: number;
+  question: string;
+  answer: string;
+};
 
-  const currentQuestion = civicsQuestions?.[currentQuestionIndex]?.question || "No question found";
-  const correctAnswer = civicsQuestions?.[currentQuestionIndex]?.correctAnswer || "No answer found";
+export default function Civics() {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showAnswer, setShowAnswer] = useState(false);
 
-  // const [aiResponse, setAiResponse] = useState<string>("");
+  // Current question details
+  const currentQuestion: CivicsQuestion | undefined = CivicsTest[currentQuestionIndex];
+  const questionId = currentQuestion?.id ?? 0;
+  const questionText = currentQuestion?.question || "No question found.";
+  const correctAnswer = currentQuestion?.answer || "No answer found.";
 
-  useEffect(() => {
-    // Check browser support for speech recognition
-    if (typeof window !== 'undefined') {
-      setIsBrowserSupported(SpeechRecognition.browserSupportsSpeechRecognition());
-    }
-
-    // Reset input and state when the question changes
-    setAnswer("");
-    setSubmitted(false);
-    resetTranscript();
-  }, [currentQuestionIndex]);
-
-  const handleInput = () => {
-    const input = transcript || answer;
-    if (!input) return;
-
-    setSubmitted(true);
-
-    // const response = await generateContent(
-    //   `Compare the user's answer: "${input}" with the correct answer: "${civicsQuestions[currentQuestionIndex].correctAnswer}". If incorrect, return the possible correct answers. No need to explain.`
-    // );
-    //
-    // setAiResponse(response);
-
-    resetTranscript();
-  };
-
+  // Speak question aloud
   const speakQuestion = () => {
-    const utterance = new SpeechSynthesisUtterance(currentQuestion);
+    const utterance = new SpeechSynthesisUtterance(questionText);
     window.speechSynthesis.speak(utterance);
   };
 
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < civicsQuestions.length - 1) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-    }
+  // Speak answer aloud
+  const speakAnswer = () => {
+    const utterance = new SpeechSynthesisUtterance(correctAnswer);
+    window.speechSynthesis.speak(utterance);
   };
 
-  const goToPreviousQuestion = () => {
+  // Show answer
+  const handleShowAnswer = () => {
+    setShowAnswer(true);
+  };
+
+  // Navigation
+  const prevQuestion = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+      setShowAnswer(false);
+      setCurrentQuestionIndex((prev) => prev - 1);
     }
   };
 
-  if (!isBrowserSupported) {
+  const nextQuestion = () => {
+    if (currentQuestionIndex < CivicsTest.length - 1) {
+      setShowAnswer(false);
+      setCurrentQuestionIndex((prev) => prev + 1);
+    }
+  };
+
+  if (!currentQuestion) {
     return (
-      <div className="p-6">
-        <p className="text-red-500">Your browser does not support speech recognition.</p>
+      <div className="p-6 text-red-500">
+        No questions available.
       </div>
     );
   }
 
   return (
-      <div className="p-6">
-          <h1 className="text-2xl font-bold text-center mb-6">Civics Questions</h1>
-          <div className="mb-4">
-              <p className="text-lg font-semibold mb-2">
-                  {currentQuestion}
-              </p>
-              <button
-                  onClick={speakQuestion}
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-              >
-                  Read Question
-              </button>
-          </div>
-          <div className="mb-4">
-              <input
-                  type="text"
-                  placeholder="Type your answer here"
-                  value={answer}
-                  onChange={(e) => setAnswer(e.target.value)}
-                  className="border rounded p-2 w-full"
-              />
-          </div>
-          <div className="flex justify-center mb-4">
-              <button
-                  onClick={() => SpeechRecognition.startListening({continuous: true})}
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-              >
-                  Speak Answer
-              </button>
-              <button
-                  onClick={handleInput}
-                  className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded ml-4"
-              >
-                  Submit
-              </button>
-              <button
-                  onClick={() => resetTranscript()}
-                  className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded ml-4"
-              >
-                  Reset
-              </button>
-          </div>
-          <div className="mt-6">
-              <h2 className="text-lg font-semibold">Spoken/Text Input:</h2>
-              <p className="bg-gray-100 p-2 rounded">{transcript || answer || "No input yet"}</p>
-              {submitted && (
-                  <>
-                    <h2 className="text-lg font-semibold mt-4">Possible Correct Answer:</h2>
-                    <p className="bg-gray-100 p-2 rounded">{correctAnswer}</p>
-                  </>
-              )}
-              {/*<h2 className="text-lg font-semibold mt-4">AI Feedback:</h2>*/}
-              {/*<p className="bg-gray-100 p-2 rounded">{aiResponse || "No feedback yet"}</p>*/}
-          </div>
-          <div className="mt-6 flex justify-between">
-            <button
-              onClick={goToPreviousQuestion}
-              disabled={currentQuestionIndex === 0}
-              className={`${
-                  currentQuestionIndex === 0
-                      ? "bg-gray-300 text-gray-700"
-                      : "bg-blue-500 hover:bg-blue-600 text-white"
-              } font-bold py-2 px-4 rounded`}
-            >
-              Previous
-            </button>
-            <button
-              onClick={goToNextQuestion}
-              disabled={currentQuestionIndex === civicsQuestions.length - 1}
-              className={`${
-                  currentQuestionIndex === civicsQuestions.length - 1
-                      ? "bg-gray-300 text-gray-700"
-                      : "bg-blue-500 hover:bg-blue-600 text-white"
-              } font-bold py-2 px-4 rounded`}
-            >
-              Next
-            </button>
-          </div>
+    <div className="mx-auto max-w-2xl py-8">
+      <div className="mb-6 text-center">
+        <h1 className="text-3xl font-bold text-gray-800">Civics Practice</h1>
       </div>
-  );
-};
 
-export default Civics;
+      <div className="rounded bg-white p-6 shadow">
+        {/* Question Info */}
+        <div className="mb-4">
+          <p className="text-lg text-gray-700">
+            <span className="font-semibold">Question #:</span> {questionId}
+          </p>
+          <p className="mt-2 text-xl font-semibold text-gray-800">
+            {questionText}
+          </p>
+        </div>
+
+        {/* Buttons Row */}
+        <div className="flex flex-wrap items-center gap-4">
+          <button
+            onClick={speakQuestion}
+            className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
+          >
+            Read Question
+          </button>
+          <button
+            onClick={handleShowAnswer}
+            className="rounded bg-gray-600 px-4 py-2 font-bold text-white transition-colors hover:bg-gray-500"
+          >
+            Show Possible Answer
+          </button>
+        </div>
+
+        {/* Show Answer */}
+        {showAnswer && (
+          <div className="mt-4 border-t pt-4">
+            <h2 className="text-lg font-semibold text-gray-800">Possible Correct Answer:</h2>
+            <p className="mt-2 rounded bg-gray-100 p-2 text-gray-700">
+              {correctAnswer}
+            </p>
+            <button
+              onClick={speakAnswer}
+              className="mt-2 rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
+            >
+              Read Answer
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Navigation */}
+      <div className="mt-6 flex justify-between">
+        <button
+          onClick={prevQuestion}
+          disabled={currentQuestionIndex === 0}
+          className={`rounded px-4 py-2 font-bold text-white transition-colors ${
+            currentQuestionIndex === 0
+              ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+              : "bg-indigo-600 hover:bg-indigo-500"
+          }`}
+        >
+          Previous
+        </button>
+        <button
+          onClick={nextQuestion}
+          disabled={currentQuestionIndex === CivicsTest.length - 1}
+          className={`rounded px-4 py-2 font-bold text-white transition-colors ${
+            currentQuestionIndex === CivicsTest.length - 1
+              ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+              : "bg-indigo-600 hover:bg-indigo-500"
+          }`}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+}

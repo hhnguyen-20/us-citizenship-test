@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "Have you ever been a communist?",
+    "answer": "No"
+  },
+  {
+    "id": 2,
+    "question": "Have you ever failed to file your income taxes?",
+    "answer": "No"
+  },
+  {
+    "id": 3,
+    "question": "Do you pay your income taxes?",
+    "answer": "Yes if you work, No if you don't"
+  },
+  {
+    "id": 4,
+    "question": "Have you ever knowingly given false information to receive an immigration benefit?",
+    "answer": "No"
+  },
+  {
+    "id": 5,
+    "question": "Have you ever registered to vote in the United States?",
+    "answer": "No"
+  },
+  {
+    "id": 6,
+    "question": "Have you ever practiced polygamy?",
+    "answer": "No"
+  },
+  {
+    "id": 7,
+    "question": "Have you ever committed prostitution?",
+    "answer": "No"
+  },
+  {
+    "id": 8,
+    "question": "Have you ever knowingly helped someone gain illegal entry to the United States?",
+    "answer": "No"
+  },
+  {
+    "id": 9,
+    "question": "Have you ever been in trouble with the police?",
+    "answer": "No"
+  },
+  {
+    "id": 10,
+    "question": "Have you ever been arrested?",
+    "answer": "No"
+  },
+  {
+    "id": 11,
+    "question": "Have you ever been in jail?",
+    "answer": "No"
+  },
+  {
+    "id": 12,
+    "question": "Have you ever committed a crime?",
+    "answer": "No"
+  },
+  {
+    "id": 13,
+    "question": "Have you ever been a habitual gambler?\n",
+    "answer": "No"
+  },
+  {
+    "id": 14,
+    "question": "Have you ever been a drunkard?",
+    "answer": "No"
+  },
+  {
+    "id": 15,
+    "question": "Have you ever been involved in narcotics trafficking?",
+    "answer": "No"
+  },
+  {
+    "id": 16,
+    "question": "Do you believe in the Constitution and the form of government of the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 17,
+    "question": "If the law requires, are you willing to bear arms in defense of the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 18,
+    "question": "If the law requires, are you willing to perform service under civilian direction to further an important cause?",
+    "answer": "Yes"
+  },
+  {
+    "id": 19,
+    "question": "Are you willing to take the full Oath of Allegiance to the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 20,
+    "question": "Do you love the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 21,
+    "question": "Will you help America?",
+    "answer": "Yes"
+  },
+  {
+    "id": 22,
+    "question": "Are you a member of any club, group, association, or organization?\n",
+    "answer": "No"
+  }
+]
