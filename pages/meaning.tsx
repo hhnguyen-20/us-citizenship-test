@@ -2,33 +2,31 @@
 
 import React, { useState } from "react";
 import meaningTest from "../data/MeaningTest.json";
-import { getVoices, getDesiredVoice, speakText } from "@/utils/common";
+import { getVoices, getDesiredVoice, speakText, goToQuestion } from "@/utils/common";
 
 export default function MeaningTest() {
+  // States
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [jumpNumber, setJumpNumber] = useState(""); // For user’s input in the "Go" box
 
   const currentItem = meaningTest[currentIndex];
   const word = currentItem?.word || "Unknown";
   const meaning = currentItem?.meaning || "No meaning found.";
   const questionText = `Can you explain what "${word}" means?`;
 
-  // On first access, or if voices haven't loaded yet, this may return an empty array
-  const voices = getVoices();
+  // Speech setup
+  const voices = getVoices(); // may be empty until voices load
   const desiredVoice = getDesiredVoice(voices, "en-US", "google");
 
-  const speakQuestion = () => {
-    speakText(questionText, desiredVoice);
-  };
+  const speakQuestion = () => speakText(questionText, desiredVoice);
+  const speakAnswer = () => speakText(meaning, desiredVoice);
 
-  const speakAnswer = () => {
-    speakText(meaning, desiredVoice);
-  };
-
-  // Show the meaning
+  // Show/hide answer
   const handleShowAnswer = () => setShowAnswer(true);
   const resetView = () => setShowAnswer(false);
 
+  // Navigation
   const nextItem = () => {
     if (currentIndex < meaningTest.length - 1) {
       setCurrentIndex((prev) => prev + 1);
@@ -43,43 +41,54 @@ export default function MeaningTest() {
     }
   };
 
+  // Jump to a specific question number
+  const handleJumpToQuestion = () => {
+    const parsedNumber = parseInt(jumpNumber, 10);
+    if (!isNaN(parsedNumber)) {
+      // Convert user’s 1-based input to 0-based index
+      const zeroBasedIndex = parsedNumber - 1;
+      goToQuestion(zeroBasedIndex, meaningTest.length, setCurrentIndex, resetView);
+    }
+  };
+
   if (!currentItem) {
     return <div className="p-6 text-red-500">No data found.</div>;
   }
 
   return (
     <div className="mx-auto max-w-2xl py-8">
+      {/* Title */}
       <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold text-gray-800">Meaning Practice</h1>
       </div>
 
+      {/* Question Box */}
       <div className="rounded bg-white p-6 shadow">
-        {/* Heading / ID */}
+        {/* Question Info */}
         <div className="mb-4">
           <p className="text-lg text-gray-700">
             <span className="font-semibold">Question #:</span> {currentItem?.id}
           </p>
         </div>
 
-        {/* Question */}
         <div className="mb-4">
           <p className="text-xl font-semibold text-gray-800">{questionText}</p>
-          <button
-            onClick={speakQuestion}
-            className="mt-2 rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
-          >
-            Read Question
-          </button>
-        </div>
 
-        {/* Show Answer */}
-        <div className="mb-4">
-          <button
-            onClick={handleShowAnswer}
-            className="rounded bg-gray-600 px-4 py-2 font-bold text-white transition-colors hover:bg-gray-500"
-          >
-            Show Possible Answer
-          </button>
+          {/* Buttons side by side */}
+          <div className="flex items-center gap-4 mt-2">
+            <button
+              onClick={speakQuestion}
+              className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
+            >
+              Read Question
+            </button>
+            <button
+              onClick={handleShowAnswer}
+              className="rounded bg-gray-600 px-4 py-2 font-bold text-white transition-colors hover:bg-gray-500"
+            >
+              Show Possible Answer
+            </button>
+          </div>
         </div>
 
         {showAnswer && (
@@ -98,29 +107,51 @@ export default function MeaningTest() {
       </div>
 
       {/* Navigation */}
-      <div className="mt-6 flex justify-between">
-        <button
-          onClick={prevItem}
-          disabled={currentIndex === 0}
-          className={`rounded px-4 py-2 font-bold text-white transition-colors ${
-            currentIndex === 0
-              ? "bg-gray-300 text-gray-700 cursor-not-allowed"
-              : "bg-indigo-600 hover:bg-indigo-500"
-          }`}
-        >
-          Previous
-        </button>
-        <button
-          onClick={nextItem}
-          disabled={currentIndex === meaningTest.length - 1}
-          className={`rounded px-4 py-2 font-bold text-white transition-colors ${
-            currentIndex === meaningTest.length - 1
-              ? "bg-gray-300 text-gray-700 cursor-not-allowed"
-              : "bg-indigo-600 hover:bg-indigo-500"
-          }`}
-        >
-          Next
-        </button>
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+        {/* Prev / Next */}
+        <div className="flex gap-2">
+          <button
+            onClick={prevItem}
+            disabled={currentIndex === 0}
+            className={`rounded px-4 py-2 font-bold text-white transition-colors ${
+              currentIndex === 0
+                ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-500"
+            }`}
+          >
+            Previous
+          </button>
+          <button
+            onClick={nextItem}
+            disabled={currentIndex === meaningTest.length - 1}
+            className={`rounded px-4 py-2 font-bold text-white transition-colors ${
+              currentIndex === meaningTest.length - 1
+                ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-500"
+            }`}
+          >
+            Next
+          </button>
+        </div>
+
+        {/* Jump-to-question area */}
+        <div className="flex items-center gap-2">
+          <input
+            type="number"
+            min="1"
+            max={meaningTest.length}
+            value={jumpNumber}
+            onChange={(e) => setJumpNumber(e.target.value)}
+            placeholder={`1 - ${meaningTest.length}`}
+            className="w-16 rounded border p-2 text-gray-700"
+          />
+          <button
+            onClick={handleJumpToQuestion}
+            className="rounded bg-indigo-600 px-4 py-2 font-bold text-white transition-colors hover:bg-indigo-500"
+          >
+            Go
+          </button>
+        </div>
       </div>
     </div>
   );

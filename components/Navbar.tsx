@@ -105,6 +105,13 @@ export default function Navbar() {
             Meaning
           </Link>
           <Link
+            href="/information"
+            className="block rounded px-3 py-2 font-medium text-white transition hover:bg-indigo-600"
+            onClick={() => setIsOpen(false)}
+          >
+            Information
+          </Link>
+          <Link
             href="/mocktest"
             className="block rounded px-3 py-2 font-medium text-white transition hover:bg-indigo-600"
             onClick={() => setIsOpen(false)}

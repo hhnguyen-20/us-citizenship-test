@@ -28,7 +28,7 @@ export default function Home() {
       </p>
 
       {/* Cards */}
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {/* Civics */}
         <div className="rounded bg-white p-4 shadow transition-transform hover:shadow-lg hover:scale-105">
           <h2 className="mb-2 text-xl font-semibold text-indigo-600">Civics</h2>

@@ -1,5 +1,7 @@
 // utils/common.ts
 
+import React from "react";
+
 export function getVoices(): SpeechSynthesisVoice[] {
   if (typeof window === "undefined") {
     // Return an empty array when on the server
@@ -51,4 +53,21 @@ export function shuffleArray<T>(arr: T[]): T[] {
     [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
   }
   return newArr;
+}
+
+export function goToQuestion(
+  questionIndex: number,
+  totalQuestions: number,
+  setIndex: React.Dispatch<React.SetStateAction<number>>,
+  resetView: () => void
+) {
+  // Ensure questionIndex is within valid range
+  if (questionIndex < 0) questionIndex = 0;
+  if (questionIndex >= totalQuestions) questionIndex = totalQuestions - 1;
+
+  // Update the state
+  setIndex(questionIndex);
+
+  // Reset any "show/hide answer" or other UI states
+  resetView();
 }
