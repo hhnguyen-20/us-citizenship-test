@@ -13,10 +13,16 @@ export function getDesiredVoice(
   lang = "en-US",
   nameKeyword = "google"
 ): SpeechSynthesisVoice | undefined {
-  // This function itself doesn't need a window check if 'voices' is always from the client
-  return voices.find(
-    (voice) => voice.lang === lang && voice.name.toLowerCase().includes(nameKeyword)
+  // Attempt to find a voice matching both lang and "google"
+  const googleVoice = voices.find(
+    (v) => v.lang === lang && v.name.toLowerCase().includes(nameKeyword)
   );
+  
+  if (googleVoice) return googleVoice;
+  
+  // If no "google" voice is found, just pick the first matching language
+  const fallbackVoice = voices.find((v) => v.lang === lang);
+  return fallbackVoice;
 }
 
 export function speakText(text: string, voice?: SpeechSynthesisVoice) {
