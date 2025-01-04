@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "word": "Claimed",
+    "meaning": "To get benefit"
+  },
+  {
+    "id": 2,
+    "word": "Register to vote",
+    "meaning": "Sign up to vote"
+  },
+  {
+    "id": 3,
+    "word": "Vote",
+    "meaning": "Elect someone"
+  },
+  {
+    "id": 4,
+    "word": "Nobility",
+    "meaning": "King or queen"
+  },
+  {
+    "id": 5,
+    "word": "Mental",
+    "meaning": "Crazy people"
+  },
+  {
+    "id": 6,
+    "word": "Mental institution",
+    "meaning": "Hospital for mental people"
+  },
+  {
+    "id": 7,
+    "word": "Owe",
+    "meaning": "You must pay"
+  },
+  {
+    "id": 8,
+    "word": "Overdue",
+    "meaning": "Expire past date"
+  },
+  {
+    "id": 9,
+    "word": "Taxes",
+    "meaning": "Money that we pay Government"
+  },
+  {
+    "id": 10,
+    "word": "Non-u.s. resident",
+    "meaning": "No home address in USA"
+  },
+  {
+    "id": 11,
+    "word": "Member",
+    "meaning": "A person belong to a group"
+  },
+  {
+    "id": 12,
+    "word": "Communism",
+    "meaning": "No freedom"
+  },
+  {
+    "id": 13,
+    "word": "Totalitarian",
+    "meaning": "Fascist"
+  },
+  {
+    "id": 14,
+    "word": "Terrorists",
+    "meaning": "Bad people who want to kill others"
+  },
+  {
+    "id": 15,
+    "word": "Advocate",
+    "meaning": "Support"
+  },
+  {
+    "id": 16,
+    "word": "Overthrow",
+    "meaning": "Kick you out"
+  },
+  {
+    "id": 17,
+    "word": "Persecuted",
+    "meaning": "To hurt someone"
+  },
+  {
+    "id": 18,
+    "word": "Race",
+    "meaning": "Skin color"
+  },
+  {
+    "id": 19,
+    "word": "Religion",
+    "meaning": "What you believe"
+  },
+  {
+    "id": 20,
+    "word": "Genocide",
+    "meaning": "Kill by gene"
+  },
+  {
+    "id": 21,
+    "word": "Torture",
+    "meaning": "Abuse"
+  },
+  {
+    "id": 22,
+    "word": "Weapon",
+    "meaning": "Gun or knife"
+  },
+  {
+    "id": 23,
+    "word": "Committed",
+    "meaning": "To do bad things"
+  },
+  {
+    "id": 24,
+    "word": "Crime",
+    "meaning": "To break the law"
+  },
+  {
+    "id": 25,
+    "word": "Arrested",
+    "meaning": "To be put in jail"
+  },
+  {
+    "id": 26,
+    "word": "Cited",
+    "meaning": "To get traffic ticket"
+  },
+  {
+    "id": 27,
+    "word": "Been charged",
+    "meaning": "To accuse"
+  },
+  {
+    "id": 28,
+    "word": "Convicted",
+    "meaning": "To be proven guilty"
+  },
+  {
+    "id": 29,
+    "word": "Jail",
+    "meaning": "A place to put bad people"
+  },
+  {
+    "id": 30,
+    "word": "Habitual drunkard",
+    "meaning": "To be addicted to alcohol"
+  },
+  {
+    "id": 31,
+    "word": "Prostitute",
+    "meaning": "Sex for money"
+  },
+  {
+    "id": 32,
+    "word": "Smuggled",
+    "meaning": "Hide something illegal"
+  },
+  {
+    "id": 33,
+    "word": "Illegal",
+    "meaning": "Not legal"
+  },
+  {
+    "id": 34,
+    "word": "Narcotics",
+    "meaning": "Cocaine and heroin"
+  },
+  {
+    "id": 35,
+    "word": "Gamble",
+    "meaning": "To play cards for money"
+  },
+  {
+    "id": 36,
+    "word": "Alimony",
+    "meaning": "Money that you need to pay after divorce"
+  },
+  {
+    "id": 37,
+    "word": "False",
+    "meaning": "Wrong information"
+  },
+  {
+    "id": 38,
+    "word": "Fraudulent",
+    "meaning": "Wrong information"
+  },
+  {
+    "id": 39,
+    "word": "Misleading",
+    "meaning": "Wrong information"
+  },
+  {
+    "id": 40,
+    "word": "Lie",
+    "meaning": "Not true"
+  },
+  {
+    "id": 41,
+    "word": "Entry admission",
+    "meaning": "Allow"
+  },
+  {
+    "id": 42,
+    "word": "Deported",
+    "meaning": "To have the Government kick someone out of the country"
+  },
+  {
+    "id": 43,
+    "word": "Support the constitution",
+    "meaning": "Obey the law"
+  },
+  {
+    "id": 44,
+    "word": "The full oath of allegiance",
+    "meaning": "Promise to obey the law of the United States"
+  },
+  {
+    "id": 45,
+    "word": "The law",
+    "meaning": "The country's rules"
+  },
+  {
+    "id": 46,
+    "word": "To bear arms",
+    "meaning": "To carry a weapon"
+  },
+  {
+    "id": 47,
+    "word": "Non-combatant",
+    "meaning": "No fight"
+  },
+  {
+    "id": 48,
+    "word": "Perform",
+    "meaning": "Action"
+  },
+  {
+    "id": 49,
+    "word": "Swear",
+    "meaning": "To promise to tell the truth"
+  }
+]
