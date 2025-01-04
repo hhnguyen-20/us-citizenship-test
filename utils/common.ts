@@ -24,7 +24,7 @@ export function getDesiredVoice(
   // 2) If no Google voice is found, try "Samantha" for Safari
   // (since iOS/Mac Safari typically includes a voice named "Samantha" for en-US)
   const safariVoice = voices.find(
-    (voice) => voice.lang === lang && voice.name.toLowerCase().includes("alex")
+    (voice) => voice.lang === lang && voice.name.toLowerCase().includes("aaron")
   );
   if (safariVoice) {
     return safariVoice;
