@@ -43,7 +43,7 @@ export function speakText(text: string, voice?: SpeechSynthesisVoice) {
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   if (voice) utterance.voice = voice;
-  utterance.rate = 0.8;
+  utterance.rate = 0.9;
   window.speechSynthesis.speak(utterance);
 }
 

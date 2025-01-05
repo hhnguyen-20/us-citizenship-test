@@ -43,31 +43,45 @@ export default function MockTest() {
   const voices = getVoices();
   const desiredVoice = getDesiredVoice(voices, "en-US", "google");
 
-  // On mount, slice & shuffle data
-  useEffect(() => {
-    const civicsSubset = civicsData.slice(0, 10).map((item: any) => ({
+  // Function to load and set questions
+  const loadQuestions = () => {
+    // Define how many questions to pick from each category
+    const civicsCount = 10;
+    const meaningCount = 5;
+    const readingWritingCount = 1;
+    const yesNoCount = 10;
+    const informationCount = 10;
+
+    // Helper function to get a random subset
+    const getRandomQuestions = (data: any[], count: number) => {
+      if (data.length <= count) return data;
+      return shuffleArray(data).slice(0, count);
+    };
+
+    // Select random subsets from each data set
+    const civicsSubset = getRandomQuestions(civicsData, civicsCount).map((item: any) => ({
       id: item.id,
       type: "civics" as const,
       question: item.question,
       answer: item.answer,
     }));
 
-    const meaningSubset = meaningData.slice(0, 5).map((item: any) => ({
+    const meaningSubset = getRandomQuestions(meaningData, meaningCount).map((item: any) => ({
       id: item.id,
       type: "meaning" as const,
       question: `Can you explain what "${item.word}" means?`,
       answer: item.meaning,
     }));
 
-    // We'll take 1 reading/writing item: question = reading, answer = writing
-    const readingWritingSubset = readingAndWritingData.slice(0, 1).map((item: any) => ({
+    // We'll take readingWritingCount reading/writing items: question = reading, answer = writing
+    const readingWritingSubset = getRandomQuestions(readingAndWritingData, readingWritingCount).map((item: any) => ({
       id: item.id,
       type: "readingwriting" as const,
       question: item.reading,   // The "reading" text
       answer: item.writing,     // The "writing" text
     }));
 
-    const yesNoSubset = yesNoData.slice(0, 10).map((item: any) => ({
+    const yesNoSubset = getRandomQuestions(yesNoData, yesNoCount).map((item: any) => ({
       id: item.id,
       type: "yesno" as const,
       question: item.question,
@@ -75,7 +89,7 @@ export default function MockTest() {
     }));
 
     // 10 questions from InformationTest.json
-    const informationSubset = informationData.slice(0, 10).map((item: any) => ({
+    const informationSubset = getRandomQuestions(informationData, informationCount).map((item: any) => ({
       id: item.id,
       type: "information" as const,
       question: item.question,
@@ -93,6 +107,14 @@ export default function MockTest() {
     combined = shuffleArray(combined);
 
     setQuestions(combined);
+    setCurrentIndex(0);
+    setShowAnswer(false);
+    resetReadingWriting();
+  };
+
+  // On mount, load questions
+  useEffect(() => {
+    loadQuestions();
   }, []);
 
   // Reset reading/writing state
@@ -202,7 +224,7 @@ export default function MockTest() {
           </div>
         </div>
       ) : (
-        /* Standard Q&A Format (civics, meaning, yesno) */
+        /* Standard Q&A Format (civics, meaning, yesno, information) */
         <div className="rounded bg-white p-6 shadow">
           <p className="mb-2 text-lg text-gray-700">
             <span className="font-semibold">Question #:</span> {currentQ.id}
@@ -264,6 +286,16 @@ export default function MockTest() {
           }`}
         >
           Next
+        </button>
+      </div>
+
+      {/* Restart Test Button */}
+      <div className="mt-6 text-center">
+        <button
+          onClick={loadQuestions}
+          className="rounded bg-red-600 px-6 py-2 font-bold text-white transition-colors hover:bg-red-500"
+        >
+          Restart Test
         </button>
       </div>
     </div>
