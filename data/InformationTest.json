@@ -366,7 +366,7 @@
     },
     {
         "id": 74,
-        "question": "What is your email?",
+        "question": "What is your email address?",
         "answer": "[Your mailing address]"
     },
     {
@@ -382,6 +382,186 @@
     {
         "id": 77,
         "question": "Do you file joint tax returns with your spouse?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 78,
+        "question": "What is your daytime telephone number?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 79,
+        "question": "Any new trips?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 80,
+        "question": "When was your last trip?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 81,
+        "question": "How long were you in Vietnam?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 82,
+        "question": "Since receiving your green card, have you ever traveled outside of the United States?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 83,
+        "question": "Have you taken any trips to another country?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 84,
+        "question": "Have you taken any trips to a foreign country?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 85,
+        "question": "Have you ever left the U.S.?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 86,
+        "question": "Have you ever been outside of the United States?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 87,
+        "question": "When and where were you married?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 88,
+        "question": "What do you do?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 89,
+        "question": "What job do you do?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 90,
+        "question": "What is your position?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 91,
+        "question": "What is your profession?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 92,
+        "question": "Do you have a job?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 93,
+        "question": "Are you employed?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 94,
+        "question": "Do you understand?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 95,
+        "question": "Stand up",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 96,
+        "question": "What is your spouse's current company?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 97,
+        "question": "Is your spouse a citizen, or does he have a green card?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 98,
+        "question": "Does your spouse have citizenship?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 99,
+        "question": "Does your spouse have a green card?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 100,
+        "question": "How many sons and how many daughters do you have?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 101,
+        "question": "What year did you move there?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 102,
+        "question": "Who is living with you?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 103,
+        "question": "Is anyone living with you?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 104,
+        "question": "Are you living with anyone?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 105,
+        "question": "Are you living alone?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 106,
+        "question": "What are the last four digits of your Social Security number?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 107,
+        "question": "What is your country of nationality?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 108,
+        "question": "What is your country of citizenship?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 109,
+        "question": "Where were you born?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 110,
+        "question": "In what country were you born?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 111,
+        "question": "When did you receive your green card?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 112,
+        "question": "When did you come to America?",
+        "answer": "[Yes or no]"
+    },
+    {
+        "id": 113,
+        "question": "What is your Alian Registration Number?",
         "answer": "[Yes or no]"
     }
 ]
