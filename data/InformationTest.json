@@ -333,5 +333,55 @@
         "id": 67,
         "question": "What is your telephone number during the day?",
         "answer": "[Your phone number]"
+    },
+    {
+        "id": 68,
+        "question": "What is your address?",
+        "answer": "[Your current address]"
+    },
+    {
+        "id": 69,
+        "question": "What is your current address?",
+        "answer": "[Your current address]"
+    },
+    {
+        "id": 70,
+        "question": "What is your current resident address?",
+        "answer": "[Your current address]"
+    },
+    {
+        "id": 71,
+        "question": "What is your current physical address?",
+        "answer": "[Your current address]"
+    },
+    {
+        "id": 72,
+        "question": "What is your current home address?",
+        "answer": "[Your current address]"
+    },
+    {
+        "id": 73,
+        "question": "Where are you currently living?",
+        "answer": "[Your current address]"
+    },
+    {
+        "id": 74,
+        "question": "What is your email?",
+        "answer": "[Your mailing address]"
+    },
+    {
+        "id": 75,
+        "question": "What is your mailing address?",
+        "answer": "[Your mailing address]"
+    },
+    {
+        "id": 76,
+        "question": "Do you have a different mailing address?",
+        "answer": "[Your mailing address]"
+    },
+    {
+        "id": 77,
+        "question": "Do you file joint tax returns with your spouse?",
+        "answer": "[Yes or no]"
     }
 ]
