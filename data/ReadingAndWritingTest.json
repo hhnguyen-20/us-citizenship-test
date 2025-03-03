@@ -22,7 +22,7 @@
   {
     "id": 5,
     "reading": "Which President was during the Civil War?",
-    "writing": "Lincoln was President during the Civil War."
+    "writing": "Lincoln was the president during the Civil War."
   },
   {
     "id": 6,
@@ -37,7 +37,7 @@
   {
     "id": 8,
     "reading": "What is the capital of the United States?",
-    "writing": "Washington, D.C. is the capital of the United States."
+    "writing": "Washington D.C. is the capital of the United States."
   },
   {
     "id": 9,
@@ -51,18 +51,18 @@
   },
   {
     "id": 11,
-    "reading": "Who elect the Congress?",
-    "writing": "The citizens elect the Congress."
+    "reading": "Who elect Congress?",
+    "writing": "The citizens elect Congress."
   },
   {
     "id": 12,
     "reading": "Where does Congress meet?",
-    "writing": "Congress meets in the Capitol in Washington D.C."
+    "writing": "Congress meets in the Capital in Washington D.C."
   },
   {
     "id": 13,
-    "reading": "When do we vote for President?",
-    "writing": "We vote for President in November."
+    "reading": "When do we vote for the President?",
+    "writing": "We vote for the President in November."
   },
   {
     "id": 14,
