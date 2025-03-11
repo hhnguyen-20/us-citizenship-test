@@ -11,7 +11,8 @@ export default function ReadingAndWriting() {
   const [showCorrectWriting, setShowCorrectWriting] = useState(false);
   const [jumpNumber, setJumpNumber] = useState(""); 
 
-  const currentItem = readingAndWritingTest[currentQuestionIndex];
+  // Changed from readingAndWritingTest to questions
+  const currentItem = questions[currentQuestionIndex];
   const readingSentence = currentItem?.reading || "No reading found.";
   const writingSentence = currentItem?.writing || "No writing found.";
 
@@ -28,7 +29,7 @@ export default function ReadingAndWriting() {
 
   // Navigation
   const nextQuestion = () => {
-    if (currentQuestionIndex < readingAndWritingTest.length - 1) {
+    if (currentQuestionIndex < questions.length - 1) { // Changed to questions.length
       setCurrentQuestionIndex((prev) => prev + 1);
       resetView();
     }
@@ -45,9 +46,8 @@ export default function ReadingAndWriting() {
   const handleJumpToQuestion = () => {
     const parsedNumber = parseInt(jumpNumber, 10);
     if (!isNaN(parsedNumber)) {
-      // Convert user's 1-based input to zero-based index
       const zeroBasedIndex = parsedNumber - 1;
-      goToQuestion(zeroBasedIndex, readingAndWritingTest.length, setCurrentQuestionIndex, resetView);
+      goToQuestion(zeroBasedIndex, questions.length, setCurrentQuestionIndex, resetView); // Changed to questions.length
     }
   };
 
