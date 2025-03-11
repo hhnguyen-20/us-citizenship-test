@@ -97,7 +97,7 @@
     {
         "id": 20,
         "question": "Who is one of your state’s U.S. Senators now?",
-        "answer": "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C.\n(or the territory where the applicant lives) has no U.S. Senators.]"
+        "answer": "Alex Padilla (CA in 2025)."
     },
     {
         "id": 21,
@@ -112,7 +112,7 @@
     {
         "id": 23,
         "question": "Name your U.S. Representative.",
-        "answer": "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may\nprovide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has\nno (voting) Representatives in Congress.]"
+        "answer": "Zoe Lofgren (95123 in 2025)"
     },
     {
         "id": 24,
@@ -137,12 +137,12 @@
     {
         "id": 28,
         "question": "What is the name of the President of the United States now?",
-        "answer": "Visit uscis.gov/citizenship/testupdates for the name of the President of the United States"
+        "answer": "Donald Trump (in 2025)"
     },
     {
         "id": 29,
         "question": "What is the name of the Vice President of the United States now?",
-        "answer": "Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States"
+        "answer": "JD Vance (in 2025)"
     },
     {
         "id": 30,
@@ -192,12 +192,12 @@
     {
         "id": 39,
         "question": "How many justices are on the Supreme Court?",
-        "answer": "Visit uscis.gov/citizenship/testupdates for the number of justices on the Supreme Court"
+        "answer": "nine (9) (in 2025)"
     },
     {
         "id": 40,
         "question": "Who is the Chief Justice of the United States now?",
-        "answer": "Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States."
+        "answer": "John Roberts (in 2025)"
     },
     {
         "id": 41,
@@ -212,12 +212,12 @@
     {
         "id": 43,
         "question": "Who is the Governor of your state now?",
-        "answer": "Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]"
+        "answer": "Gavin Newsom (CA in 2025)"
     },
     {
         "id": 44,
         "question": "What is the capital of your state?",
-        "answer": "Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a\ncapital. Residents of U.S. territories should name the capital of the territory.]"
+        "answer": "Sacramento (CA in 2025)"
     },
     {
         "id": 45,
@@ -227,12 +227,12 @@
     {
         "id": 46,
         "question": "What is the political party of the President now?",
-        "answer": "Visit uscis.gov/citizenship/testupdates for the political party of the President"
+        "answer": "Republican (Party) (in 2025)"
     },
     {
         "id": 47,
         "question": "What is the name of the Speaker of the House of Representatives now?",
-        "answer": "Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives"
+        "answer": "Mike Johnson (in 2025)"
     },
     {
         "id": 48,
