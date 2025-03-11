@@ -21,7 +21,7 @@
   },
   {
     "id": 5,
-    "question": "Have you ever registered to vote in the United States?",
+    "question": "Have you EVER registered to vote in any Federal, state, or local election in the United States?",
     "answer": "No"
   },
   {
@@ -106,7 +106,52 @@
   },
   {
     "id": 22,
-    "question": "Are you a member of any club, group, association, or organization?\n",
+    "question": "Have you EVER been a member of, or in any way associated (either directly or indirectly) with any party, club, group, association, or organization?",
+    "answer": "No"
+  },
+  {
+    "id": 23,
+    "question": "Have you EVER claimed to be a U.S. citizen?",
+    "answer": "No"
+  },
+  {
+    "id": 24,
+    "question": "Have you EVER voted in any Federal, state, or local election in the United States?",
+    "answer": "No"
+  },
+  {
+    "id": 25,
+    "question": "Did you EVER have a hereditary title or an order of nobility in any foreign country?",
+    "answer": "No"
+  },
+  {
+    "id": 26,
+    "question": "Have you EVER been declared legally incompetent or been confined to a mental institution?",
+    "answer": "No"
+  },
+  {
+    "id": 27,
+    "question": "Have you EVER voted in any Federal, state, or local election in the United States?",
+    "answer": "No"
+  },
+  {
+    "id": 28,
+    "question": "Do you owe any overdue Federal, state, or local taxes?",
+    "answer": "No"
+  },
+  {
+    "id": 29,
+    "question": "Have you EVER not filed a Federal, state, or local tax return since you became a lawful permanent resident?",
+    "answer": "No"
+  },
+  {
+    "id": 30,
+    "question": "Have you called yourself a "non-U.S. resident" on a Federal, state, or local tax return since you became a lawful permanent resident?",
+    "answer": "No"
+  },
+  {
+    "id": 31,
+    "question": "Have you EVER advocated (either directly or indirectly) the overthrow of any government by force or violence?",
     "answer": "No"
   }
 ]
