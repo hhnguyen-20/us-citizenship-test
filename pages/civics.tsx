@@ -3,14 +3,15 @@
 import React, { useState } from "react";
 import CivicsTest from "@/data/CivicsTest.json";
 // Import the helper if you want a single function that sets the index safely
-import { getVoices, getDesiredVoice, speakText, goToQuestion } from "@/utils/common";
+import { getVoices, getDesiredVoice, speakText, goToQuestion, shuffleArray } from "@/utils/common";
 
 export default function Civics() {
+  const [questions, setQuestions] = useState(CivicsTest);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [jumpNumber, setJumpNumber] = useState(""); // <-- NEW: for user input
+  const [jumpNumber, setJumpNumber] = useState(""); 
 
-  const currentQuestion = CivicsTest[currentQuestionIndex];
+  const currentQuestion = questions[currentQuestionIndex];
   const questionId = currentQuestion?.id ?? 0;
   const questionText = currentQuestion?.question ?? "No question found.";
   const correctAnswer = currentQuestion?.answer ?? "No answer found.";
@@ -51,6 +52,14 @@ export default function Civics() {
     }
   };
 
+  // Shuffle questions using the imported shuffleArray function
+  const shuffleQuestions = () => {
+    const shuffled = shuffleArray(questions);
+    setQuestions(shuffled);
+    setCurrentQuestionIndex(0);
+    resetView();
+  };
+
   if (!currentQuestion) {
     return <div className="p-6 text-red-500">No questions available.</div>;
   }
@@ -85,6 +94,12 @@ export default function Civics() {
             className="rounded bg-gray-600 px-4 py-2 font-bold text-white transition-colors hover:bg-gray-500"
           >
             Show Possible Answer
+          </button>
+          <button
+            onClick={shuffleQuestions}
+            className="rounded bg-yellow-600 px-4 py-2 font-bold text-white transition-colors hover:bg-yellow-500"
+          >
+            Shuffle
           </button>
         </div>
 

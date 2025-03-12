@@ -47,6 +47,7 @@ export function speakText(text: string, voice?: SpeechSynthesisVoice) {
   window.speechSynthesis.speak(utterance);
 }
 
+// Shuffle questions using the Fisher–Yates algorithm
 export function shuffleArray<T>(arr: T[]): T[] {
   const newArr = [...arr];
   for (let i = newArr.length - 1; i > 0; i--) {

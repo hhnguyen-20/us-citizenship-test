@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import readingAndWritingTest from "../data/ReadingAndWritingTest.json";
-import { getVoices, getDesiredVoice, speakText, goToQuestion } from "@/utils/common";
+import { getVoices, getDesiredVoice, speakText, goToQuestion, shuffleArray } from "@/utils/common";
 
 export default function ReadingAndWriting() {
   const [questions, setQuestions] = useState(readingAndWritingTest);
@@ -55,17 +55,12 @@ export default function ReadingAndWriting() {
     return <div className="p-6 text-red-500">No questions available.</div>;
   }
 
-  // Shuffle questions using the Fisher–Yates algorithm
   const shuffleQuestions = () => {
-    const shuffled = [...questions];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
+    const shuffled = shuffleArray(questions);
     setQuestions(shuffled);
     setCurrentQuestionIndex(0);
     resetView();
-  };
+  };  
 
   return (
     <div className="mx-auto max-w-2xl py-8">
