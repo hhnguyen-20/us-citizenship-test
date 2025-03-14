@@ -1,67 +1,227 @@
 [
   {
     "id": 1,
-    "question": "Have you ever been a communist?",
+    "question": "Have you EVER claimed to be a U.S. citizen?",
     "answer": "No"
+  },
+  {
+    "id": 0,
+    "question": "What is 'Claimed'?",
+    "answer": "To get benefit"
   },
   {
     "id": 2,
-    "question": "Have you ever failed to file your income taxes?",
-    "answer": "No"
-  },
-  {
-    "id": 3,
-    "question": "Do you pay your income taxes?",
-    "answer": "Yes if you work, No if you don't"
-  },
-  {
-    "id": 4,
-    "question": "Have you ever knowingly given false information to receive an immigration benefit?",
-    "answer": "No"
-  },
-  {
-    "id": 5,
     "question": "Have you EVER registered to vote in any Federal, state, or local election in the United States?",
     "answer": "No"
   },
   {
-    "id": 6,
-    "question": "Have you ever practiced polygamy?",
+    "id": 0,
+    "question": "What is 'Register to vote'?",
+    "answer": "Sign up to vote"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Vote'?",
+    "meaning": "Elect someone"
+  },
+  {
+    "id": 3,
+    "question": "Do you currently owe any overdue Federal, state, or local taxes in the United States?",
     "answer": "No"
   },
   {
-    "id": 7,
-    "question": "Have you ever committed prostitution?",
+    "id": 0,
+    "word": "What is 'Owe'?",
+    "meaning": "You must pay"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Overdue'?",
+    "meaning": "Expire past date"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Taxes'?",
+    "meaning": "Money that we pay Government"
+  },
+  {
+    "id": 4,
+    "question": "Since you became a lawful permanent resident, have you called yourself a 'nonresident alien' on a Federal, state, or local tax return or decided not to file a tax return because you considered yourself to be a nonresident?",
     "answer": "No"
   },
   {
-    "id": 8,
-    "question": "Have you ever knowingly helped someone gain illegal entry to the United States?",
+    "id": 0,
+    "word": "What is 'Nonresident'?",
+    "meaning": "No home address in USA"
+  },
+  {
+    "id": 5.1,
+    "word": "Have you EVER been a member of, involved in, or in any way associated with any Communist or totalitarian party anywhere in the world?",
+    "meaning": "No"
+  },
+  {
+    "id": 0,
+    "word": "Member",
+    "meaning": "A person belong to a group"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Communism'?",
+    "meaning": "No freedom"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Totalitarian'?",
+    "meaning": "Fascist"
+  },
+  {
+    "id": 5.2,
+    "question": "Have you EVER advocated the overthrow by force or violence or other unconstitutional means of the Government of the United States or all forms of law?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Advocate'?",
+    "meaning": "Support"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Overthrow'?",
+    "meaning": "Kick you out"
+  },
+  {
+    "id": 6.1,
+    "word": "Have you EVER been a member of, involved in, or in any way associated with a group that used a weapon or explosive with intent to harm another person or cause damage to property?",
+    "meaning": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Weapon'?",
+    "meaning": "Gun or knife"
+  },
+  {
+    "id": 6.2,
+    "word": "Have you EVER been a member of, involved in, or in any way associated with a group that engaged in kidnapping, assassination, or hijacking or sabotage of an airplane, ship, vehicle, or other mode of transportation?",
+    "meaning": "No"
+  },
+  {
+    "id": 6.3,
+    "word": "Have you EVER been a member of, involved in, or in any way associated with a group that threatened, attempted, conspired, prepared, planned, advocated for, or incited others to commit any of the acts listed above?",
+    "meaning": "No"
+  },
+  {
+    "id": 7.1,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in torture?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Committed'?",
+    "meaning": "To do bad things"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Torture'?",
+    "meaning": "Abuse"
+  },
+  {
+    "id": 7.2,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in genocide?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Genocide'?",
+    "meaning": "Kill by gene"
+  },
+  {
+    "id": 7.3,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in killing or trying to kill any person?",
+    "answer": "No"
+  },
+  {
+    "id": 7.4,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in intentionally and severely injuring or trying to injure any person?",
+    "answer": "No"
+  },
+  {
+    "id": 7.5,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any kind of sexual contact or activity with any person who did not consent or was unable to consent, or was being forced or threatened by you or by someone else?",
+    "answer": "No"
+  },
+  {
+    "id": 7.6,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in not letting someone practice their religion?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Religion'?",
+    "meaning": "What you believe"
+  },
+  {
+    "id": 7.7,
+    "question": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in causing harm or suffering to any person because of their race, religion, national origin, membership in a particular social group, or political opinion?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Race'?",
+    "meaning": "Skin color"
+  },
+  {
+    "id": 8.1,
+    "question": "Have you EVER served in, been a member of, assisted, or participated in any military unit or police unit?",
     "answer": "No"
   },
   {
     "id": 9,
+    "word": "Have you EVER worked, volunteered, or otherwise served in a place where people were detained, for example, a prison, jail, prison camp, detention facility, or labor camp?",
+    "meaning": "No"
+  },
+  {
+    "id": 0,
+    "word": "Jail",
+    "meaning": "A place to put bad people"
+  },
+  {
+    "id": 0,
+    "question": "Have you ever been a communist?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "question": "Have you ever failed to file your income taxes?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "question": "Do you pay your income taxes?",
+    "answer": "Yes if you work, No if you don't"
+  },
+  {
+    "id": 0,
+    "question": "Have you ever knowingly given false information to receive an immigration benefit?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "question": "Have you ever practiced polygamy?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
     "question": "Have you ever been in trouble with the police?",
     "answer": "No"
   },
   {
-    "id": 10,
+    "id": 0,
     "question": "Have you ever been arrested?",
     "answer": "No"
   },
   {
-    "id": 11,
+    "id": 0,
     "question": "Have you ever been in jail?",
-    "answer": "No"
-  },
-  {
-    "id": 12,
-    "question": "Have you ever committed a crime?",
-    "answer": "No"
-  },
-  {
-    "id": 13,
-    "question": "Have you ever been a habitual gambler?\n",
     "answer": "No"
   },
   {
@@ -70,48 +230,143 @@
     "answer": "No"
   },
   {
-    "id": 15,
-    "question": "Have you ever been involved in narcotics trafficking?",
+    "id": 30,
+    "word": "Habitual drunkard",
+    "meaning": "To be addicted to alcohol"
+  },
+  {
+    "id": 17.1,
+    "question": "Have you EVER engaged in prostitution, attempted to procure or import prostitutes or persons for the purpose of prostitution, or received any proceeds or money from prostitution?",
     "answer": "No"
   },
   {
-    "id": 16,
-    "question": "Do you believe in the Constitution and the form of government of the United States?",
-    "answer": "Yes"
+    "id": 0,
+    "word": "What is 'Prostitute'?",
+    "meaning": "Sex for money"
   },
   {
-    "id": 17,
-    "question": "If the law requires, are you willing to bear arms in defense of the United States?",
-    "answer": "Yes"
+    "id": 17.2,
+    "question": "Have you EVER manufactured, cultivated, produced, distributed, dispensed, sold, or smuggled any controlled substances, illegal drugs, narcotics, or drug paraphernalia in violation of any law or regulation of a U.S. state, the United States, or a foreign country?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Smuggled'?",
+    "meaning": "Hide something illegal"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Illegal'?",
+    "meaning": "Not legal"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Narcotics'?",
+    "meaning": "Cocaine and heroin"
+  },
+  {
+    "id": 17.3,
+    "question": "Have you EVER been married to more than one person at the same time?",
+    "answer": "No"
+  },
+  {
+    "id": 17.4,
+    "question": "Have you EVER married someone in order to obtain an immigration benefit?",
+    "answer": "No"
+  },
+  {
+    "id": 17.5,
+    "question": "Have you EVER helped anyone to enter, or try to enter, the United States illegally?",
+    "answer": "No"
+  },
+  {
+    "id": 17.6,
+    "question": "Have you EVER gambled illegally or received income from illegal gambling?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Gamble'?",
+    "meaning": "To play cards for money"
+  },
+  {
+    "id": 17.7,
+    "question": "Have you EVER failed to support your dependents or to pay alimony?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Alimony'?",
+    "meaning": "Money that you need to pay after divorce"
+  },
+  {
+    "id": 17.8,
+    "question": "Have you EVER made any misrepresentation to obtain any public benefit in the United States?",
+    "answer": "No"
   },
   {
     "id": 18,
-    "question": "If the law requires, are you willing to perform service under civilian direction to further an important cause?",
-    "answer": "Yes"
-  },
-  {
-    "id": 19,
-    "question": "Are you willing to take the full Oath of Allegiance to the United States?",
-    "answer": "Yes"
-  },
-  {
-    "id": 20,
-    "question": "Do you love the United States?",
-    "answer": "Yes"
-  },
-  {
-    "id": 21,
-    "question": "Will you help America?",
-    "answer": "Yes"
-  },
-  {
-    "id": 22,
-    "question": "Have you EVER been a member of, or in any way associated (either directly or indirectly) with any party, club, group, association, or organization?",
+    "question": "Have you EVER given any U.S. Government officials any information or documentation that was false, fraudulent, or misleading?",
     "answer": "No"
   },
   {
+    "id": 0,
+    "word": "What is 'False, fraudulent, or misleading'?",
+    "meaning": "Wrong information"
+  },
+  {
+    "id": 19,
+    "question": "Have you EVER lied to any U.S. Government officials to gain entry or admission into the United States or to gain immigration benefits while in the United States?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Lie'?",
+    "meaning": "Not true"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Entry or admission'?",
+    "meaning": "Allow"
+  },
+  {
+    "id": 20,
+    "question": "Have you EVER been placed in removal, rescission, or deportation proceedings?",
+    "answer": "No"
+  },
+  {
+    "id": 21,
+    "question": "Have you EVER been removed or deported from the United States?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Deported'?",
+    "meaning": "To have the Government kick someone out of the country"
+  },
+  {
+    "id": 22,
+    "word": "Are you a person born as a male who lived in the United States at any time between your 18th and 26th birthdays?",
+    "meaning": "No"
+  },
+  {
     "id": 23,
-    "question": "Have you EVER claimed to be a U.S. citizen?",
+    "question": "Have you EVER left the United States to avoid being drafted into the U.S. armed forces?",
+    "answer": "No"
+  },
+  {
+    "id": 24,
+    "question": "Have you EVER applied for any kind of exemption from military service in the U.S. armed forces?",
+    "answer": "No"
+  },
+  {
+    "id": 25,
+    "question": "Have you EVER served in the U.S. armed forces?",
+    "answer": "No"
+  },
+  {
+    "id": 0,
+    "question": "Have you EVER been a member of, or in any way associated (either directly or indirectly) with any party, club, group, association, or organization?",
     "answer": "No"
   },
   {
@@ -120,38 +375,138 @@
     "answer": "No"
   },
   {
-    "id": 25,
-    "question": "Did you EVER have a hereditary title or an order of nobility in any foreign country?",
-    "answer": "No"
-  },
-  {
     "id": 26,
     "question": "Have you EVER been declared legally incompetent or been confined to a mental institution?",
     "answer": "No"
   },
   {
-    "id": 27,
+    "id": 0,
+    "word": "Mental",
+    "meaning": "Crazy people"
+  },
+  {
+    "id": 0,
+    "word": "Mental institution",
+    "meaning": "Hospital for mental people"
+  },
+  {
+    "id": 0,
     "question": "Have you EVER voted in any Federal, state, or local election in the United States?",
     "answer": "No"
   },
   {
-    "id": 28,
-    "question": "Do you owe any overdue Federal, state, or local taxes?",
-    "answer": "No"
-  },
-  {
-    "id": 29,
+    "id": 0,
     "question": "Have you EVER not filed a Federal, state, or local tax return since you became a lawful permanent resident?",
     "answer": "No"
   },
   {
-    "id": 30,
-    "question": "Have you called yourself a \"non-U.S. resident\" on a Federal, state, or local tax return since you became a lawful permanent resident?",
+    "id": 10,
+    "word": "Were you EVER a part of any group, unit, or organization that used a weapon against any person, or threatened to do so?",
+    "meaning": "No"
+  },
+  {
+    "id": 15.1,
+    "question": "Have you EVER committed, agreed to commit, asked someone else to commit, helped commit, or tried to commit a crime or offense for which you were NOT arrested?",
     "answer": "No"
   },
   {
-    "id": 31,
-    "question": "Have you EVER advocated (either directly or indirectly) the overthrow of any government by force or violence?",
+    "id": 0,
+    "word": "What is 'Crime'?",
+    "meaning": "To break the law"
+  },
+  {
+    "id": 0,
+    "word": "Arrested",
+    "meaning": "To be put in jail"
+  },
+  {
+    "id": 15.2,
+    "question": "Have you ever been arrested, cited, detained or confined by any law enforcement officer, military official, or immigration official for any reason, or been charged with a crime or offense?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Cited'?",
+    "meaning": "To get traffic ticket"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Been charged'?",
+    "meaning": "To accuse"
+  },
+  {
+    "id": 30,
+    "question": "Did you EVER have a hereditary title or an order of nobility in any foreign country?",
     "answer": "No"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Nobility'?",
+    "meaning": "King or queen"
+  },
+  {
+    "id": 31,
+    "question": "Do you support the Constitution and form of government of the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Support the constitution'?",
+    "meaning": "Obey the law"
+  },
+  {
+    "id": 32,
+    "question": "Do you understand the full Oath of Allegiance to the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 0,
+    "word": "What is 'The full oath of allegiance'?",
+    "meaning": "Promise to obey the law of the United States"
+  },
+  {
+    "id": 33,
+    "word": "Are you unable to take the full Oath of Allegiance to the United States because of a physical or developmental disability or mental impairment?",
+    "meaning": "No"
+  },
+  {
+    "id": 34,
+    "word": "Are you willing to take the full Oath of Allegiance to the United States?",
+    "meaning": "Yes"
+  },
+  {
+    "id": 35,
+    "question": "If the law requires it, are you willing to bear arms on behalf of the United States?",
+    "answer": "Yes"
+  },
+  {
+    "id": 0,
+    "word": "What is 'The law'?",
+    "meaning": "The country's rules"
+  },
+  {
+    "id": 0,
+    "word": "What is 'To bear arms'?",
+    "meaning": "To carry a weapon"
+  },
+  {
+    "id": 36,
+    "question": "If the law requires it, are you willing to perform noncombatant services in the U.S. Armed Forces?",
+    "answer": "Yes"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Perform'?",
+    "meaning": "Action"
+  },
+  {
+    "id": 0,
+    "word": "What is 'Noncombatant'?",
+    "meaning": "No fight"
+  },
+  {
+    "id": 37,
+    "question": "If the law requires it, are you willing to perform work of national importance under civilian direction?",
+    "answer": "Yes"
   }
 ]
