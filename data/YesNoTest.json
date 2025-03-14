@@ -21,7 +21,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Vote'?",
+    "question": "What is 'Vote'?",
     "meaning": "Elect someone"
   },
   {
@@ -31,17 +31,17 @@
   },
   {
     "id": 0,
-    "word": "What is 'Owe'?",
+    "question": "What is 'Owe'?",
     "meaning": "You must pay"
   },
   {
     "id": 0,
-    "word": "What is 'Overdue'?",
+    "question": "What is 'Overdue'?",
     "meaning": "Expire past date"
   },
   {
     "id": 0,
-    "word": "What is 'Taxes'?",
+    "question": "What is 'Taxes'?",
     "meaning": "Money that we pay Government"
   },
   {
@@ -51,27 +51,27 @@
   },
   {
     "id": 0,
-    "word": "What is 'Nonresident'?",
+    "question": "What is 'Nonresident'?",
     "meaning": "No home address in USA"
   },
   {
     "id": 5.1,
-    "word": "Have you EVER been a member of, involved in, or in any way associated with any Communist or totalitarian party anywhere in the world?",
+    "question": "Have you EVER been a member of, involved in, or in any way associated with any Communist or totalitarian party anywhere in the world?",
     "meaning": "No"
   },
   {
     "id": 0,
-    "word": "Member",
+    "question": "Member",
     "meaning": "A person belong to a group"
   },
   {
     "id": 0,
-    "word": "What is 'Communism'?",
+    "question": "What is 'Communism'?",
     "meaning": "No freedom"
   },
   {
     "id": 0,
-    "word": "What is 'Totalitarian'?",
+    "question": "What is 'Totalitarian'?",
     "meaning": "Fascist"
   },
   {
@@ -81,32 +81,32 @@
   },
   {
     "id": 0,
-    "word": "What is 'Advocate'?",
+    "question": "What is 'Advocate'?",
     "meaning": "Support"
   },
   {
     "id": 0,
-    "word": "What is 'Overthrow'?",
+    "question": "What is 'Overthrow'?",
     "meaning": "Kick you out"
   },
   {
     "id": 6.1,
-    "word": "Have you EVER been a member of, involved in, or in any way associated with a group that used a weapon or explosive with intent to harm another person or cause damage to property?",
+    "question": "Have you EVER been a member of, involved in, or in any way associated with a group that used a weapon or explosive with intent to harm another person or cause damage to property?",
     "meaning": "No"
   },
   {
     "id": 0,
-    "word": "What is 'Weapon'?",
+    "question": "What is 'Weapon'?",
     "meaning": "Gun or knife"
   },
   {
     "id": 6.2,
-    "word": "Have you EVER been a member of, involved in, or in any way associated with a group that engaged in kidnapping, assassination, or hijacking or sabotage of an airplane, ship, vehicle, or other mode of transportation?",
+    "question": "Have you EVER been a member of, involved in, or in any way associated with a group that engaged in kidnapping, assassination, or hijacking or sabotage of an airplane, ship, vehicle, or other mode of transportation?",
     "meaning": "No"
   },
   {
     "id": 6.3,
-    "word": "Have you EVER been a member of, involved in, or in any way associated with a group that threatened, attempted, conspired, prepared, planned, advocated for, or incited others to commit any of the acts listed above?",
+    "question": "Have you EVER been a member of, involved in, or in any way associated with a group that threatened, attempted, conspired, prepared, planned, advocated for, or incited others to commit any of the acts listed above?",
     "meaning": "No"
   },
   {
@@ -116,12 +116,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'Committed'?",
+    "question": "What is 'Committed'?",
     "meaning": "To do bad things"
   },
   {
     "id": 0,
-    "word": "What is 'Torture'?",
+    "question": "What is 'Torture'?",
     "meaning": "Abuse"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Genocide'?",
+    "question": "What is 'Genocide'?",
     "meaning": "Kill by gene"
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Religion'?",
+    "question": "What is 'Religion'?",
     "meaning": "What you believe"
   },
   {
@@ -166,7 +166,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Race'?",
+    "question": "What is 'Race'?",
     "meaning": "Skin color"
   },
   {
@@ -176,12 +176,12 @@
   },
   {
     "id": 9,
-    "word": "Have you EVER worked, volunteered, or otherwise served in a place where people were detained, for example, a prison, jail, prison camp, detention facility, or labor camp?",
+    "question": "Have you EVER worked, volunteered, or otherwise served in a place where people were detained, for example, a prison, jail, prison camp, detention facility, or labor camp?",
     "meaning": "No"
   },
   {
     "id": 0,
-    "word": "Jail",
+    "question": "Jail",
     "meaning": "A place to put bad people"
   },
   {
@@ -231,7 +231,7 @@
   },
   {
     "id": 30,
-    "word": "Habitual drunkard",
+    "question": "Habitual drunkard",
     "meaning": "To be addicted to alcohol"
   },
   {
@@ -241,7 +241,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Prostitute'?",
+    "question": "What is 'Prostitute'?",
     "meaning": "Sex for money"
   },
   {
@@ -251,17 +251,17 @@
   },
   {
     "id": 0,
-    "word": "What is 'Smuggled'?",
+    "question": "What is 'Smuggled'?",
     "meaning": "Hide something illegal"
   },
   {
     "id": 0,
-    "word": "What is 'Illegal'?",
+    "question": "What is 'Illegal'?",
     "meaning": "Not legal"
   },
   {
     "id": 0,
-    "word": "What is 'Narcotics'?",
+    "question": "What is 'Narcotics'?",
     "meaning": "Cocaine and heroin"
   },
   {
@@ -286,7 +286,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Gamble'?",
+    "question": "What is 'Gamble'?",
     "meaning": "To play cards for money"
   },
   {
@@ -296,7 +296,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Alimony'?",
+    "question": "What is 'Alimony'?",
     "meaning": "Money that you need to pay after divorce"
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'False, fraudulent, or misleading'?",
+    "question": "What is 'False, fraudulent, or misleading'?",
     "meaning": "Wrong information"
   },
   {
@@ -321,12 +321,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'Lie'?",
+    "question": "What is 'Lie'?",
     "meaning": "Not true"
   },
   {
     "id": 0,
-    "word": "What is 'Entry or admission'?",
+    "question": "What is 'Entry or admission'?",
     "meaning": "Allow"
   },
   {
@@ -341,12 +341,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'Deported'?",
+    "question": "What is 'Deported'?",
     "meaning": "To have the Government kick someone out of the country"
   },
   {
     "id": 22,
-    "word": "Are you a person born as a male who lived in the United States at any time between your 18th and 26th birthdays?",
+    "question": "Are you a person born as a male who lived in the United States at any time between your 18th and 26th birthdays?",
     "meaning": "No"
   },
   {
@@ -381,12 +381,12 @@
   },
   {
     "id": 0,
-    "word": "Mental",
+    "question": "Mental",
     "meaning": "Crazy people"
   },
   {
     "id": 0,
-    "word": "Mental institution",
+    "question": "Mental institution",
     "meaning": "Hospital for mental people"
   },
   {
@@ -401,7 +401,7 @@
   },
   {
     "id": 10,
-    "word": "Were you EVER a part of any group, unit, or organization that used a weapon against any person, or threatened to do so?",
+    "question": "Were you EVER a part of any group, unit, or organization that used a weapon against any person, or threatened to do so?",
     "meaning": "No"
   },
   {
@@ -411,12 +411,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'Crime'?",
+    "question": "What is 'Crime'?",
     "meaning": "To break the law"
   },
   {
     "id": 0,
-    "word": "Arrested",
+    "question": "Arrested",
     "meaning": "To be put in jail"
   },
   {
@@ -426,12 +426,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'Cited'?",
+    "question": "What is 'Cited'?",
     "meaning": "To get traffic ticket"
   },
   {
     "id": 0,
-    "word": "What is 'Been charged'?",
+    "question": "What is 'Been charged'?",
     "meaning": "To accuse"
   },
   {
@@ -441,7 +441,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Nobility'?",
+    "question": "What is 'Nobility'?",
     "meaning": "King or queen"
   },
   {
@@ -451,7 +451,7 @@
   },
   {
     "id": 0,
-    "word": "What is 'Support the constitution'?",
+    "question": "What is 'Support the constitution'?",
     "meaning": "Obey the law"
   },
   {
@@ -461,17 +461,17 @@
   },
   {
     "id": 0,
-    "word": "What is 'The full oath of allegiance'?",
+    "question": "What is 'The full oath of allegiance'?",
     "meaning": "Promise to obey the law of the United States"
   },
   {
     "id": 33,
-    "word": "Are you unable to take the full Oath of Allegiance to the United States because of a physical or developmental disability or mental impairment?",
+    "question": "Are you unable to take the full Oath of Allegiance to the United States because of a physical or developmental disability or mental impairment?",
     "meaning": "No"
   },
   {
     "id": 34,
-    "word": "Are you willing to take the full Oath of Allegiance to the United States?",
+    "question": "Are you willing to take the full Oath of Allegiance to the United States?",
     "meaning": "Yes"
   },
   {
@@ -481,12 +481,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'The law'?",
+    "question": "What is 'The law'?",
     "meaning": "The country's rules"
   },
   {
     "id": 0,
-    "word": "What is 'To bear arms'?",
+    "question": "What is 'To bear arms'?",
     "meaning": "To carry a weapon"
   },
   {
@@ -496,12 +496,12 @@
   },
   {
     "id": 0,
-    "word": "What is 'Perform'?",
+    "question": "What is 'Perform'?",
     "meaning": "Action"
   },
   {
     "id": 0,
-    "word": "What is 'Noncombatant'?",
+    "question": "What is 'Noncombatant'?",
     "meaning": "No fight"
   },
   {
