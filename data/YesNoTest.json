@@ -175,64 +175,74 @@
     "answer": "No"
   },
   {
+    "id": 8.2,
+    "question": "Have you EVER served in, been a member of, assisted, or participated in any armed group, for example: paramilitary unit, self-defense unit, vigilante unit, rebel group, or guerrilla group?",
+    "answer": "No"
+  },
+  {
     "id": 9,
     "question": "Have you EVER worked, volunteered, or otherwise served in a place where people were detained, for example, a prison, jail, prison camp, detention facility, or labor camp?",
     "meaning": "No"
   },
   {
     "id": 0,
-    "question": "Jail",
+    "question": "What is 'Jail'?",
     "meaning": "A place to put bad people"
   },
   {
-    "id": 0,
-    "question": "Have you ever been a communist?",
-    "answer": "No"
+    "id": 10,
+    "question": "Were you EVER a part of any group, unit, or organization that used a weapon against any person, or threatened to do so?",
+    "meaning": "No"
   },
   {
-    "id": 0,
-    "question": "Have you ever failed to file your income taxes?",
-    "answer": "No"
+    "id": 11,
+    "question": "Have you EVER sold, provided, or transported weapons, or assisted any person in selling, providing, or transporting weapons, which you knew or believed would be used against another person?",
+    "meaning": "No"
   },
   {
-    "id": 0,
-    "question": "Do you pay your income taxes?",
-    "answer": "Yes if you work, No if you don't"
+    "id": 12,
+    "question": "Have you EVER received any weapons training, paramilitary training, or other military-type training?",
+    "meaning": "No"
   },
   {
-    "id": 0,
-    "question": "Have you ever knowingly given false information to receive an immigration benefit?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "Have you ever practiced polygamy?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "Have you ever been in trouble with the police?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "Have you ever been arrested?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "Have you ever been in jail?",
-    "answer": "No"
+    "id": 13,
+    "question": "Have you EVER recruited, enlisted, conscripted, or used any person under 15 years of age to serve in or help an armed group, or attempted or worked with others to do so?",
+    "meaning": "No"
   },
   {
     "id": 14,
-    "question": "Have you ever been a drunkard?",
+    "question": "Have you EVER used any person under 15 years of age to take part in hostilities or attempted or worked with others to do so?",
+    "meaning": "No"
+  },
+  {
+    "id": 15.1,
+    "question": "Have you EVER committed, agreed to commit, asked someone else to commit, helped commit, or tried to commit a crime or offense for which you were NOT arrested?",
     "answer": "No"
   },
   {
-    "id": 30,
-    "question": "Habitual drunkard",
-    "meaning": "To be addicted to alcohol"
+    "id": 0,
+    "question": "What is 'Crime'?",
+    "meaning": "To break the law"
+  },
+  {
+    "id": 0,
+    "question": "What is 'Arrested'?",
+    "meaning": "To be put in jail"
+  },
+  {
+    "id": 15.2,
+    "question": "Have you ever been arrested, cited, detained or confined by any law enforcement officer, military official, or immigration official for any reason, or been charged with a crime or offense?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 0,
+    "question": "What is 'Cited'?",
+    "meaning": "To get traffic ticket"
+  },
+  {
+    "id": 0,
+    "question": "What is 'Been charged'?",
+    "meaning": "To accuse"
   },
   {
     "id": 17.1,
@@ -365,76 +375,6 @@
     "answer": "No"
   },
   {
-    "id": 0,
-    "question": "Have you EVER been a member of, or in any way associated (either directly or indirectly) with any party, club, group, association, or organization?",
-    "answer": "No"
-  },
-  {
-    "id": 24,
-    "question": "Have you EVER voted in any Federal, state, or local election in the United States?",
-    "answer": "No"
-  },
-  {
-    "id": 26,
-    "question": "Have you EVER been declared legally incompetent or been confined to a mental institution?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "Mental",
-    "meaning": "Crazy people"
-  },
-  {
-    "id": 0,
-    "question": "Mental institution",
-    "meaning": "Hospital for mental people"
-  },
-  {
-    "id": 0,
-    "question": "Have you EVER voted in any Federal, state, or local election in the United States?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "Have you EVER not filed a Federal, state, or local tax return since you became a lawful permanent resident?",
-    "answer": "No"
-  },
-  {
-    "id": 10,
-    "question": "Were you EVER a part of any group, unit, or organization that used a weapon against any person, or threatened to do so?",
-    "meaning": "No"
-  },
-  {
-    "id": 15.1,
-    "question": "Have you EVER committed, agreed to commit, asked someone else to commit, helped commit, or tried to commit a crime or offense for which you were NOT arrested?",
-    "answer": "No"
-  },
-  {
-    "id": 0,
-    "question": "What is 'Crime'?",
-    "meaning": "To break the law"
-  },
-  {
-    "id": 0,
-    "question": "Arrested",
-    "meaning": "To be put in jail"
-  },
-  {
-    "id": 15.2,
-    "question": "Have you ever been arrested, cited, detained or confined by any law enforcement officer, military official, or immigration official for any reason, or been charged with a crime or offense?",
-    "answer": "[Yes or no]"
-  },
-  {
-    "id": 0,
-    "question": "What is 'Cited'?",
-    "meaning": "To get traffic ticket"
-  },
-  {
-    "id": 0,
-    "question": "What is 'Been charged'?",
-    "meaning": "To accuse"
-  },
-  {
     "id": 30,
     "question": "Did you EVER have a hereditary title or an order of nobility in any foreign country?",
     "answer": "No"
@@ -468,6 +408,11 @@
     "id": 33,
     "question": "Are you unable to take the full Oath of Allegiance to the United States because of a physical or developmental disability or mental impairment?",
     "meaning": "No"
+  },
+  {
+    "id": 0,
+    "question": "What is 'Mental'?",
+    "meaning": "Crazy people"
   },
   {
     "id": 34,
