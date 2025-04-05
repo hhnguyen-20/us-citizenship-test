@@ -15,6 +15,31 @@
     "answer": "I promised to tell the truth."
   },
   {
+    "id": 124,
+    "question": "Have a seat",
+    "answer": "Thank you"
+  },
+  {
+    "id": 27,
+    "question": "My name is Officer Robinson. I will be doing your interview today. Ok?",
+    "answer": "[Yes or No]"
+  },
+  {
+    "id": 27,
+    "question": "Why are you here today?",
+    "answer": "[Yes or No]"
+  },
+  {
+    "id": 27,
+    "question": "Have there been any changes since you applied for citizenship?",
+    "answer": "[Yes or No]"
+  },
+  {
+    "id": 125,
+    "question": "Is everything the same?",
+    "answer": "Yes"
+  },
+  {
     "id": 3,
     "question": "What is your green card number?",
     "answer": "[Your Alien Registration Number]"
@@ -30,8 +55,18 @@
     "answer": "[Your full name]"
   },
   {
+    "id": 4,
+    "question": "What is your full legal name?",
+    "answer": "[Your full name]"
+  },
+  {
     "id": 5,
     "question": "What is your given name?",
+    "answer": "[Your first name]"
+  },
+  {
+    "id": 5,
+    "question": "What is your first name?",
     "answer": "[Your first name]"
   },
   {
@@ -40,13 +75,33 @@
     "answer": "[Your last name]"
   },
   {
+    "id": 6,
+    "question": "What is your last name?",
+    "answer": "[Your last name]"
+  },
+  {
     "id": 7,
-    "question": "Do you have a middle name?",
+    "question": "What is your middle name?",
     "answer": "Yes, my middle name is... if you have one. No if you don't."
   },
   {
     "id": 115,
-    "question": "What is your another name?",
+    "question": "Have you used any other name?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 115,
+    "question": "Do you have an English name?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 115,
+    "question": "Do you have an American name?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 115,
+    "question": "Is that your only name?",
     "answer": "[Yes or no]"
   },
   {
@@ -67,6 +122,16 @@
   {
     "id": 11,
     "question": "What is your birthday?",
+    "answer": "[Your date of birth]"
+  },
+  {
+    "id": 11,
+    "question": "What is your date of birth?",
+    "answer": "[Your date of birth]"
+  },
+  {
+    "id": 11,
+    "question": "Is there any other date of birth that you have?",
     "answer": "[Your date of birth]"
   },
   {
@@ -97,6 +162,16 @@
   {
     "id": 15,
     "question": "How long have you been in the United States?",
+    "answer": "_____ years"
+  },
+  {
+    "id": 15,
+    "question": "How long have you been a permanent president?",
+    "answer": "_____ years"
+  },
+  {
+    "id": 15,
+    "question": "How many years have you had a green card?",
     "answer": "_____ years"
   },
   {
@@ -208,11 +283,6 @@
     "id": 73,
     "question": "Where are you currently living?",
     "answer": "[Your current address]"
-  },
-  {
-    "id": 27,
-    "question": "Have there been any changes since you applied for citizenship?",
-    "answer": "[Yes or No]"
   },
   {
     "id": 28,
