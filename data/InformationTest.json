@@ -130,62 +130,62 @@
     "answer": "[Your date of birth]"
   },
   {
-    "id": 11,
+    "id": 27,
     "question": "What is your date of birth?",
     "answer": "[Your date of birth]"
   },
   {
-    "id": 11,
+    "id": 28,
     "question": "Is there any other date of birth that you have?",
     "answer": "[Your date of birth]"
   },
   {
-    "id": 12,
+    "id": 29,
     "question": "How old are you?",
     "answer": "____ years old"
   },
   {
-    "id": 13,
+    "id": 30,
     "question": "How did you become a lawful permanent resident?",
     "answer": "_____ petitioned me"
   },
   {
-    "id": 14,
+    "id": 31,
     "question": "What is your brother's name?",
     "answer": "[The date on your green card]"
   },
   {
-    "id": 14,
+    "id": 32,
     "question": "Is he a us citizen?",
     "answer": "[The date on your green card]"
   },
   {
-    "id": 14,
+    "id": 33,
     "question": "How did he become a permanent resident?",
     "answer": "[The date on your green card]"
   },
   {
-    "id": 14,
+    "id": 34,
     "question": "When did you become a lawful permanent resident?",
     "answer": "[The date on your green card]"
   },
   {
-    "id": 111,
+    "id": 35,
     "question": "When did you receive your green card?",
     "answer": "[The date on your green card]"
   },
   {
-    "id": 112,
+    "id": 36,
     "question": "When did you come to United States?",
     "answer": "[The date on your green card]"
   },
   {
-    "id": 15,
+    "id": 37,
     "question": "How long have you been in the United States?",
     "answer": "_____ years"
   },
   {
-    "id": 15,
+    "id": 38,
     "question": "How long have you been a permanent president?",
     "answer": "_____ years"
   },
