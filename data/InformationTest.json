@@ -105,6 +105,11 @@
     "answer": "[Yes or no]"
   },
   {
+    "id": 115,
+    "question": "Do you have a different name?",
+    "answer": "[Yes or no]"
+  },
+  {
     "id": 8,
     "question": "Do you want to keep your name?",
     "answer": "[Yes or No]"
@@ -146,6 +151,21 @@
   },
   {
     "id": 14,
+    "question": "What is your brother's name?",
+    "answer": "[The date on your green card]"
+  },
+  {
+    "id": 14,
+    "question": "Is he a us citizen?",
+    "answer": "[The date on your green card]"
+  },
+  {
+    "id": 14,
+    "question": "How did he become a permanent resident?",
+    "answer": "[The date on your green card]"
+  },
+  {
+    "id": 14,
     "question": "When did you become a lawful permanent resident?",
     "answer": "[The date on your green card]"
   },
@@ -156,7 +176,7 @@
   },
   {
     "id": 112,
-    "question": "When did you come to America?",
+    "question": "When did you come to United States?",
     "answer": "[The date on your green card]"
   },
   {
@@ -175,6 +195,11 @@
     "answer": "_____ years"
   },
   {
+    "id": 109,
+    "question": "When and where were you born?",
+    "answer": "[Your country of birth]"
+  },
+  {
     "id": 16,
     "question": "What is your country of birth?",
     "answer": "[Your country of birth]"
@@ -190,18 +215,23 @@
     "answer": "[Your country of birth]"
   },
   {
-    "id": 109,
-    "question": "Where were you born?",
-    "answer": "[Your country of birth]"
-  },
-  {
     "id": 110,
     "question": "In what country were you born?",
     "answer": "[Your country of birth]"
   },
   {
+    "id": 110,
+    "question": "Do you have any other citizenship?",
+    "answer": "[Your country of birth]"
+  },
+  {
     "id": 17,
     "question": "Was one of your parents a U.S. citizen before your 18th birthday?",
+    "answer": "[Yes or No]"
+  },
+  {
+    "id": 17,
+    "question": "Was your parent married before your 18th birthday?",
     "answer": "[Yes or No]"
   },
   {
@@ -236,7 +266,17 @@
   },
   {
     "id": 23,
+    "question": "What is your height",
+    "answer": "___ pounds"
+  },
+  {
+    "id": 23,
     "question": "How much do you weigh?",
+    "answer": "___ pounds"
+  },
+  {
+    "id": 23,
+    "question": "What is your weight?",
     "answer": "___ pounds"
   },
   {
@@ -286,6 +326,31 @@
   },
   {
     "id": 28,
+    "question": "How long have you been living there?",
+    "answer": "[Yes or No]"
+  },
+  {
+    "id": 30,
+    "question": "When did you move there?",
+    "answer": "[The date you moved there]"
+  },
+  {
+    "id": 101,
+    "question": "What day did you move there?",
+    "answer": "[The date you moved there]"
+  },
+  {
+    "id": 101,
+    "question": "Do you rent or do you own?",
+    "answer": "[The date you moved there]"
+  },
+  {
+    "id": 101,
+    "question": "How much is the rent?",
+    "answer": "[The date you moved there]"
+  },
+  {
+    "id": 28,
     "question": "Are you living at the same address?",
     "answer": "[Yes or No]"
   },
@@ -305,6 +370,11 @@
     "answer": "[Yes or No, I live with...]"
   },
   {
+    "id": 103,
+    "question": "Is anyone else living there?",
+    "answer": "[Yes or No, I live with...]"
+  },
+  {
     "id": 104,
     "question": "Are you living with anyone?",
     "answer": "[Yes or No, I live with...]"
@@ -315,19 +385,24 @@
     "answer": "[Yes or No, I live with...]"
   },
   {
-    "id": 30,
-    "question": "When did you move there?",
-    "answer": "[The date you moved there]"
-  },
-  {
-    "id": 101,
-    "question": "What year did you move there?",
-    "answer": "[The date you moved there]"
+    "id": 103,
+    "question": "Is anyone beside your family living there?",
+    "answer": "[Yes or No, I live with...]"
   },
   {
     "id": 31,
     "question": "Where did you live before?",
     "answer": "[Your previous address]"
+  },
+  {
+    "id": 31,
+    "question": "How long did you live there?",
+    "answer": "[Your previous address]"
+  },
+  {
+    "id": 32,
+    "question": "Is that where you get your mail?",
+    "answer": "[Your mailing address]"
   },
   {
     "id": 32,
@@ -383,16 +458,6 @@
     "id": 87,
     "question": "When and where were you married?",
     "answer": "[The date and place you were married]"
-  },
-  {
-    "id": 39,
-    "question": "When were you married?",
-    "answer": "[The date you were married]"
-  },
-  {
-    "id": 40,
-    "question": "Where were you married?",
-    "answer": "[The place you were married]"
   },
   {
     "id": 41,
@@ -505,6 +570,11 @@
     "answer": "[Your job]"
   },
   {
+    "id": 93,
+    "question": "What day did you start working there",
+    "answer": "[Your job]"
+  },
+  {
     "id": 90,
     "question": "What is your position?",
     "answer": "[Your job]"
@@ -515,18 +585,33 @@
     "answer": "[Your job]"
   },
   {
+    "id": 91,
+    "question": "What is your occupation?",
+    "answer": "[Your job]"
+  },
+  {
     "id": 92,
     "question": "Do you have a job?",
     "answer": "[Your job]"
   },
   {
     "id": 93,
-    "question": "Are you employed?",
+    "question": "Are you currently employed?",
+    "answer": "[Your job]"
+  },
+  {
+    "id": 93,
+    "question": "When did you start working there",
     "answer": "[Your job]"
   },
   {
     "id": 57,
     "question": "How long have you worked there?",
+    "answer": "_____ years"
+  },
+  {
+    "id": 57,
+    "question": "Where did you work before that",
     "answer": "_____ years"
   },
   {
@@ -556,7 +641,7 @@
   },
   {
     "id": 83,
-    "question": "Have you taken any trips to another country?",
+    "question": "In the last 5 years, have you taken any trips to another country for about 180 days?",
     "answer": "[Yes or no]"
   },
   {
@@ -566,12 +651,17 @@
   },
   {
     "id": 85,
-    "question": "Have you ever left the U.S.?",
+    "question": "In the last 5 years, have you left the United States?",
     "answer": "[Yes or no]"
   },
   {
     "id": 86,
     "question": "Have you ever been outside of the United States?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 85,
+    "question": "In the last 5 years, have you left the United States for 6 months?",
     "answer": "[Yes or no]"
   },
   {
@@ -596,12 +686,17 @@
   },
   {
     "id": 80,
-    "question": "When was your last trip?",
+    "question": "When was your last trip outside the United States?",
     "answer": "[The dates you visited]"
   },
   {
     "id": 81,
     "question": "How long were you in Vietnam?",
+    "answer": "[Yes or no]"
+  },
+  {
+    "id": 81,
+    "question": "How long was that trip?",
     "answer": "[Yes or no]"
   },
   {
