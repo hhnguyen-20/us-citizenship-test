@@ -210,23 +210,58 @@
     "meaning": "Expire past date"
   },
   {
-    "id": 43,
-    "word": "Owe",
-    "meaning": "You must pay"
-  },
-  {
-    "id": 44,
-    "word": "Register to vote",
-    "meaning": "Sign up to vote"
-  },
-  {
     "id": 45,
     "word": "Vote",
     "meaning": "Elect someone"
   },
   {
     "id": 46,
-    "word": "Claimed",
-    "meaning": "To get benefit"
+    "word": "Claim",
+    "meaning": "Say something is true"
+  },
+  {
+    "id": 47,
+    "word": "Register",
+    "meaning": "Sign up"
+  },
+  {
+    "id": 48,
+    "word": "Vote",
+    "meaning": "Elect someone"
+  },
+  {
+    "id": 49,
+    "word": "Owe",
+    "meaning": "Have to pay"
+  },
+  {
+    "id": 50,
+    "word": "Arrested",
+    "meaning": "Taken by the police"
+  },
+  {
+    "id": 51,
+    "word": "Cited",
+    "meaning": "Get traffic ticket"
+  },
+  {
+    "id": 52,
+    "word": "Constitution",
+    "meaning": "The supreme law of the land"
+  },
+  {
+    "id": 53,
+    "word": "Oath of allegiance",
+    "meaning": "A promise to obey the law of the United States"
+  },
+  {
+    "id": 54,
+    "word": "Bear arms",
+    "meaning": "Carry weapons"
+  },
+  {
+    "id": 55,
+    "word": "Noncombatant services",
+    "meaning": "Services without fighting"
   }
 ]
