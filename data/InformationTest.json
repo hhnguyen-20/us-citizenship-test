@@ -30,6 +30,11 @@
     "answer": "[Yes or No]"
   },
   {
+    "id": 175,
+    "question": "What happened the last time you were here?",
+    "answer": "I failed because I did not understand"
+  },
+  {
     "id": 7,
     "question": "Have there been any changes since you applied for citizenship?",
     "answer": "[Yes or No]"
@@ -138,6 +143,11 @@
     "id": 28,
     "question": "How old are you?",
     "answer": "[____ years old]"
+  },
+  {
+    "id": 173,
+    "question": "Does anyone in your family help you get the green card??",
+    "answer": "[yea]"
   },
   {
     "id": 29,
@@ -558,6 +568,11 @@
     "id": 112,
     "question": "Where were your children born?",
     "answer": "[Your children's address]"
+  },
+  {
+    "id": 174,
+    "question": "Both of them?",
+    "answer": "[yea]"
   },
   {
     "id": 113,
