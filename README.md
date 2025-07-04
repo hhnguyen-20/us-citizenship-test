@@ -1,85 +1,158 @@
-<a href="https://demo.useliftoff.com">
-  <img alt="Liftoff – AI-Powered Mock Interviews" src="https://demo.useliftoff.com/opengraph-image">
-  <h1 align="center">Liftoff Interviews</h1>
-</a>
+# US Citizenship Test Preparation App
 
-<p align="center">
-  Mock Interview Simulator with AI-Powered Feedback
-</p>
+A comprehensive web application designed to help individuals prepare for the US Citizenship Test. This interactive tool provides practice questions across all required test categories with a modern, user-friendly interface.
 
-<p align="center">
-  <a href="https://twitter.com/tmeyer_me">
-    <img src="https://img.shields.io/twitter/follow/tmeyer_me?style=flat&label=Follow&logo=twitter&color=0bf&logoColor=fff" alt="Tyler Meyer's follower count" />
-  </a>
-  <a href="https://github.com/Tameyer41/liftoff">
-    <img src="https://img.shields.io/github/stars/Tameyer41/liftoff?label=Tameyer41%2Fliftoff" alt="Liftoff repo star count" />
-  </a>
-</p>
+## 🎯 Features
 
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#one-click-deploy"><strong>One-click Deploy</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
-  <a href="#author"><strong>Author</strong></a>
-</p>
-<br/>
+### Test Categories
+- **Civics Test** - 100 official civics questions covering American government, history, and geography
+- **Information Test** - Personal information questions commonly asked during the interview
+- **Yes/No Questions** - Important yes/no questions with explanations for key terms
+- **Reading & Writing Test** - Practice reading sentences aloud and writing them correctly
+- **Meaning Test** - Vocabulary practice for understanding key terms used in the test
+- **Mock Test** - Comprehensive practice test combining questions from all categories
 
-## Introduction
+### Key Features
+- **Interactive Practice** - Navigate through questions with Previous/Next buttons
+- **Jump to Question** - Quickly navigate to any specific question number
+- **Text-to-Speech** - Hear questions and answers read aloud for pronunciation practice
+- **Answer Reveal** - Show correct answers to check your knowledge
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Fixed Navigation** - Easy-to-access navigation buttons that stay at the bottom of the screen
+- **Question Shuffling** - Randomize question order for better practice
 
-Liftoff is an interview preparation tool that provides AI feedback on your mock interviews.
+## 🚀 Getting Started
 
-## One-click Deploy
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-You can deploy this template to Vercel with the button below:
+### Installation
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/tameyer41/clone?demo-title=Liftoff%20%E2%80%93%C2%A0AI%20Mock%20Interview%20Simulator&demo-description=Liftoff%20is%20an%20interview%20preparation%20tool%20that%20provides%20AI%20feedback%20on%20your%20mock%20interviews%2C%20built%20with%20OpenAI%20Whisper%20and%20GPT.&demo-url=https%3A%2F%2Fdemo.useliftoff.com%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F5TbjLXmeKdo2rURpnjIEqn%2Fc7c8fc350183e8cd3c819d172c0005ac%2F68747470733a2f2f696b2e696d6167656b69742e696f2f396b6d3732617371752f436c65616e53686f745f323032332d30352d33315f61745f31322e34332e35&project-name=Liftoff%20%E2%80%93%C2%A0AI%20Mock%20Interview%20Simulator&repository-name=liftoff&repository-url=https%3A%2F%2Fgithub.com%2FTameyer41%2Fliftoff&from=templates&skippable-integrations=1&env=OPENAI_API_KEY&envDescription=Get%20your%20OpenAI%20API%20key%20here%3A&envLink=https%3A%2F%2Fplatform.openai.com%2Faccount%2Fapi-keys)
-
-You can also clone & create this repo locally with the following command:
-
+1. Clone the repository:
 ```bash
-npx create-next-app liftoff --example "https://github.com/Tameyer41/liftoff"
+git clone https://github.com/hhnguyen-20/us-citizenship-test.git
+cd us-citizenship-test
 ```
 
-## Tech Stack + Features
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-![Landing Page](https://ik.imagekit.io/9km72asqu/CleanShot_2023-05-31_at_12.43.54_svKkqF7dA.png?updatedAt=1685551454273)
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-![Interview Selection](https://ik.imagekit.io/9km72asqu/CleanShot_2023-05-31_at_13.35.55_xohCRNMlJ.png?updatedAt=1685554576155)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Frameworks
+## 📚 How to Use
 
-- [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
+### Individual Test Sections
+1. **Civics Practice** - Study the 100 official civics questions
+2. **Information Practice** - Practice answering personal information questions
+3. **Yes/No Practice** - Learn important yes/no questions with term explanations
+4. **Reading & Writing** - Practice reading sentences and writing them correctly
+5. **Meaning Practice** - Learn the meaning of key vocabulary terms
 
-### Platforms
+### Mock Test
+- Takes 10 questions from Civics
+- Takes 10 questions from Information  
+- Takes 15 questions from Yes/No
+- Takes 1 question from Reading & Writing
+- Questions are randomized for realistic test simulation
 
-- [Vercel](https://vercel.com/) – Easily preview & deploy changes with git
-- [Upstash](https://upstash.com/) - Serverless Data Platform (here using serverless Redis for rate limiting)
+### Navigation
+- **Previous/Next** - Navigate between questions
+- **Go Button** - Jump to any specific question number
+- **Read Aloud** - Hear questions and answers spoken
+- **Show Answer** - Reveal correct answers for learning
 
-### UI
+## 🛠️ Tech Stack
 
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
-- [Framer Motion](https://framer.com/motion) – Motion library for React to animate components with ease
-- [`ImageResponse`](https://beta.nextjs.org/docs/api-reference/image-response) – Generate dynamic Open Graph images at the edge
-- [HeadlessUI](https://headlessui.com/) - Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
+- **Framework**: [Next.js](https://nextjs.org/) - React framework for production
+- **Language**: [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **Deployment**: [Vercel](https://vercel.com/) - Easy deployment and hosting
 
-### Code Quality
+## 📁 Project Structure
 
-- [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
-- [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
-- [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
+```
+us-citizenship-test/
+├── app/                    # Next.js app directory
+├── components/             # Reusable React components
+├── data/                   # JSON files containing test questions
+│   ├── CivicsTest.json
+│   ├── InformationTest.json
+│   ├── YesNoTest.json
+│   ├── ReadingAndWritingTest.json
+│   └── MeaningTest.json
+├── pages/                  # Individual test page components
+├── styles/                 # Global styles
+└── utils/                  # Utility functions
+```
 
-### Miscellaneous
+## 🎨 UI/UX Features
 
-- [FFMPEG.WASM](https://ffmpegwasm.netlify.app/) – Transcode video/audio files
-- [React Webcam](https://github.com/mozmorris/react-webcam) - Webcam component for React
-- [Stripe Gradient Animation](https://whatamesh.vercel.app/) - [@jordienr](https://twitter.com/jordienr) released a Mesh Gradient that uses WebGL and animates a beautiful gradient
+- **Modern Design** - Clean, professional interface
+- **Mobile Responsive** - Optimized for all screen sizes
+- **Accessibility** - Keyboard navigation and screen reader support
+- **Fixed Navigation** - Easy access to controls at bottom of screen
+- **Visual Feedback** - Clear button states and transitions
 
-## How it all works
+## 📝 Data Structure
 
-Liftoff uses FFmpeg to transcode the raw video into MP3. Chrome, Safari, and Firefox all record with different codecs, and FFmpeg is great for standardizing them.
+Each test category uses a consistent JSON structure:
 
-We then send the audio directly to be transcribed by OpenAI's Whisper endpoint, and then stream feedback from the edge using OpenAI's gpt-3.5-turbo.
+```json
+{
+  "id": 1,
+  "question": "What is the supreme law of the land?",
+  "answer": "The Constitution"
+}
+```
 
-## Author
+For Reading & Writing tests:
+```json
+{
+  "id": 1,
+  "reading": "Who was the first President?",
+  "writing": "Washington was the first President."
+}
+```
 
-- Tyler Meyer ([@tmeyer_me](https://twitter.com/tmeyer_me))
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
+
+### Other Platforms
+The app can be deployed to any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+- AWS Amplify
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 🙏 Acknowledgments
+
+- Official USCIS test questions and materials
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first styling approach
+- All contributors who help improve this tool
+
+**Good luck with your US Citizenship Test preparation! 🇺🇸**
