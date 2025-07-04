@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import CivicsTest from "@/data/CivicsTest.json";
 // Import the helper if you want a single function that sets the index safely
 import { getVoices, getDesiredVoice, speakText, goToQuestion, shuffleArray } from "@/utils/common";
+/// <reference types="react" />
 
 export default function Civics() {
   const [questions, setQuestions] = useState(CivicsTest);
@@ -31,14 +32,14 @@ export default function Civics() {
   const prevQuestion = () => {
     if (currentQuestionIndex > 0) {
       resetView();
-      setCurrentQuestionIndex((prev) => prev - 1);
+      setCurrentQuestionIndex((prev: number) => prev - 1);
     }
   };
 
   const nextQuestion = () => {
     if (currentQuestionIndex < CivicsTest.length - 1) {
       resetView();
-      setCurrentQuestionIndex((prev) => prev + 1);
+      setCurrentQuestionIndex((prev: number) => prev + 1);
     }
   };
 
@@ -46,7 +47,7 @@ export default function Civics() {
   const handleJumpToQuestion = () => {
     const parsedNumber = parseInt(jumpNumber, 10);
     if (!isNaN(parsedNumber)) {
-      // Convert user’s 1-based input to zero-based index
+      // Convert user's 1-based input to zero-based index
       const zeroBasedIndex = parsedNumber - 1;
       goToQuestion(zeroBasedIndex, CivicsTest.length, setCurrentQuestionIndex, resetView);
     }
@@ -81,8 +82,8 @@ export default function Civics() {
           </p>
         </div>
 
-        {/* Buttons Row (Side by Side) */}
-        <div className="flex flex-wrap items-center gap-4">
+        {/* Action Buttons Row */}
+        <div className="flex flex-wrap items-center gap-4 mb-4 justify-center sm:justify-start">
           <button
             onClick={speakQuestion}
             className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
@@ -123,9 +124,9 @@ export default function Civics() {
       </div>
 
       {/* Navigation */}
-      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
-        {/* Prev / Next Buttons */}
-        <div className="flex gap-2">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
+        <div className="mx-auto max-w-2xl flex justify-between items-center">
+          {/* Prev / Next Buttons */}
           <button
             onClick={prevQuestion}
             disabled={currentQuestionIndex === 0}
@@ -137,6 +138,26 @@ export default function Civics() {
           >
             Previous
           </button>
+          
+          {/* Jump-to-question area */}
+          <div className="flex items-center gap-2">
+            <input
+              type="number"
+              min="1"
+              max={CivicsTest.length}
+              value={jumpNumber}
+              onChange={(e) => setJumpNumber(e.target.value)}
+              placeholder={`1 - ${CivicsTest.length}`}
+              className="w-16 rounded border p-2 text-gray-700"
+            />
+            <button
+              onClick={handleJumpToQuestion}
+              className="rounded bg-indigo-600 px-4 py-2 font-bold text-white transition-colors hover:bg-indigo-500"
+            >
+              Go
+            </button>
+          </div>
+          
           <button
             onClick={nextQuestion}
             disabled={currentQuestionIndex === CivicsTest.length - 1}
@@ -149,26 +170,10 @@ export default function Civics() {
             Next
           </button>
         </div>
-
-        {/* Jump-to-question area */}
-        <div className="flex items-center gap-2">
-          <input
-            type="number"
-            min="1"
-            max={CivicsTest.length}
-            value={jumpNumber}
-            onChange={(e) => setJumpNumber(e.target.value)}
-            placeholder={`1 - ${CivicsTest.length}`}
-            className="w-16 rounded border p-2 text-gray-700"
-          />
-          <button
-            onClick={handleJumpToQuestion}
-            className="rounded bg-indigo-600 px-4 py-2 font-bold text-white transition-colors hover:bg-indigo-500"
-          >
-            Go
-          </button>
-        </div>
       </div>
+      
+      {/* Add bottom padding to prevent content from being hidden behind fixed navigation */}
+      <div className="h-20"></div>
     </div>
   );
 }

@@ -3,12 +3,13 @@
 import React, { useState } from "react";
 import meaningTest from "../data/MeaningTest.json";
 import { getVoices, getDesiredVoice, speakText, goToQuestion } from "@/utils/common";
+/// <reference types="react" />
 
 export default function MeaningTest() {
   // States
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [jumpNumber, setJumpNumber] = useState(""); // For user’s input in the "Go" box
+  const [jumpNumber, setJumpNumber] = useState(""); // For user's input in the "Go" box
 
   const currentItem = meaningTest[currentIndex];
   const word = currentItem?.word || "Unknown";
@@ -29,14 +30,14 @@ export default function MeaningTest() {
   // Navigation
   const nextItem = () => {
     if (currentIndex < meaningTest.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
+      setCurrentIndex((prev: number) => prev + 1);
       resetView();
     }
   };
 
   const prevItem = () => {
     if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
+      setCurrentIndex((prev: number) => prev - 1);
       resetView();
     }
   };
@@ -45,7 +46,7 @@ export default function MeaningTest() {
   const handleJumpToQuestion = () => {
     const parsedNumber = parseInt(jumpNumber, 10);
     if (!isNaN(parsedNumber)) {
-      // Convert user’s 1-based input to 0-based index
+      // Convert user's 1-based input to 0-based index
       const zeroBasedIndex = parsedNumber - 1;
       goToQuestion(zeroBasedIndex, meaningTest.length, setCurrentIndex, resetView);
     }
@@ -75,7 +76,7 @@ export default function MeaningTest() {
           <p className="text-xl font-semibold text-gray-800">{questionText}</p>
 
           {/* Buttons side by side */}
-          <div className="flex items-center gap-4 mt-2">
+          <div className="flex flex-wrap items-center gap-4 mt-2 mb-2 justify-center sm:justify-start">
             <button
               onClick={speakQuestion}
               className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
@@ -107,9 +108,9 @@ export default function MeaningTest() {
       </div>
 
       {/* Navigation */}
-      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
-        {/* Prev / Next */}
-        <div className="flex gap-2">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
+        <div className="mx-auto max-w-2xl flex justify-between items-center">
+          {/* Prev / Next */}
           <button
             onClick={prevItem}
             disabled={currentIndex === 0}
@@ -121,6 +122,26 @@ export default function MeaningTest() {
           >
             Previous
           </button>
+          
+          {/* Jump-to-question area */}
+          <div className="flex items-center gap-2">
+            <input
+              type="number"
+              min="1"
+              max={meaningTest.length}
+              value={jumpNumber}
+              onChange={(e) => setJumpNumber(e.target.value)}
+              placeholder={`1 - ${meaningTest.length}`}
+              className="w-16 rounded border p-2 text-gray-700"
+            />
+            <button
+              onClick={handleJumpToQuestion}
+              className="rounded bg-indigo-600 px-4 py-2 font-bold text-white transition-colors hover:bg-indigo-500"
+            >
+              Go
+            </button>
+          </div>
+          
           <button
             onClick={nextItem}
             disabled={currentIndex === meaningTest.length - 1}
@@ -133,26 +154,10 @@ export default function MeaningTest() {
             Next
           </button>
         </div>
-
-        {/* Jump-to-question area */}
-        <div className="flex items-center gap-2">
-          <input
-            type="number"
-            min="1"
-            max={meaningTest.length}
-            value={jumpNumber}
-            onChange={(e) => setJumpNumber(e.target.value)}
-            placeholder={`1 - ${meaningTest.length}`}
-            className="w-16 rounded border p-2 text-gray-700"
-          />
-          <button
-            onClick={handleJumpToQuestion}
-            className="rounded bg-indigo-600 px-4 py-2 font-bold text-white transition-colors hover:bg-indigo-500"
-          >
-            Go
-          </button>
-        </div>
       </div>
+      
+      {/* Add bottom padding to prevent content from being hidden behind fixed navigation */}
+      <div className="h-20"></div>
     </div>
   );
 }

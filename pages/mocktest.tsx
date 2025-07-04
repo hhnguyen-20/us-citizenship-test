@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+/// <reference types="react" />
 // Data
 import civicsData from "../data/CivicsTest.json";
 import meaningData from "../data/MeaningTest.json";
@@ -47,10 +48,10 @@ export default function MockTest() {
   const loadQuestions = () => {
     // Define how many questions to pick from each category
     const civicsCount = 10;
-    const meaningCount = 5;
-    const readingWritingCount = 1;
-    const yesNoCount = 10;
     const informationCount = 10;
+    const yesNoCount = 15;
+    const readingWritingCount = 1;
+    // const meaningCount = 5; // Remove meaning questions from mock test
 
     // Helper function to get a random subset
     const getRandomQuestions = (data: any[], count: number) => {
@@ -66,12 +67,13 @@ export default function MockTest() {
       answer: item.answer,
     }));
 
-    const meaningSubset = getRandomQuestions(meaningData, meaningCount).map((item: any) => ({
-      id: item.id,
-      type: "meaning" as const,
-      question: `Can you explain what "${item.word}" means?`,
-      answer: item.meaning,
-    }));
+    // Remove meaningSubset from mock test
+    // const meaningSubset = getRandomQuestions(meaningData, meaningCount).map((item: any) => ({
+    //   id: item.id,
+    //   type: "meaning" as const,
+    //   question: `Can you explain what "${item.word}" means?`,
+    //   answer: item.meaning,
+    // }));
 
     // We'll take readingWritingCount reading/writing items: question = reading, answer = writing
     const readingWritingSubset = getRandomQuestions(readingAndWritingData, readingWritingCount).map((item: any) => ({
@@ -99,7 +101,6 @@ export default function MockTest() {
     // Merge & shuffle
     let combined = [
       ...civicsSubset,
-      ...meaningSubset,
       ...readingWritingSubset,
       ...yesNoSubset,
       ...informationSubset,
@@ -126,7 +127,7 @@ export default function MockTest() {
   // Go to next question
   const nextQuestion = () => {
     if (currentIndex < questions.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
+      setCurrentIndex((prev: number) => prev + 1);
       setShowAnswer(false);
       resetReadingWriting(); // reset if the next question is reading/writing or not
     }
@@ -135,7 +136,7 @@ export default function MockTest() {
   // Go to previous question
   const prevQuestion = () => {
     if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
+      setCurrentIndex((prev: number) => prev - 1);
       setShowAnswer(false);
       resetReadingWriting();
     }
@@ -232,7 +233,7 @@ export default function MockTest() {
           <p className="mb-4 text-xl font-semibold text-gray-800">
             {currentQ.question}
           </p>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 mt-2 mb-2 justify-center sm:justify-start">
             <button
               onClick={() => speakText(currentQ.question, desiredVoice)}
               className="rounded bg-blue-600 px-4 py-2 font-bold text-white transition-colors hover:bg-blue-500"
@@ -264,40 +265,46 @@ export default function MockTest() {
       )}
 
       {/* Navigation */}
-      <div className="mt-6 flex justify-between">
-        <button
-          onClick={prevQuestion}
-          disabled={currentIndex === 0}
-          className={`rounded px-4 py-2 font-bold text-white transition-colors ${
-            currentIndex === 0
-              ? "bg-gray-300 text-gray-700 cursor-not-allowed"
-              : "bg-indigo-600 hover:bg-indigo-500"
-          }`}
-        >
-          Previous
-        </button>
-        <button
-          onClick={nextQuestion}
-          disabled={currentIndex === questions.length - 1}
-          className={`rounded px-4 py-2 font-bold text-white transition-colors ${
-            currentIndex === questions.length - 1
-              ? "bg-gray-300 text-gray-700 cursor-not-allowed"
-              : "bg-indigo-600 hover:bg-indigo-500"
-          }`}
-        >
-          Next
-        </button>
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
+        <div className="mx-auto max-w-2xl flex justify-between items-center">
+          {/* Previous Button */}
+          <button
+            onClick={prevQuestion}
+            disabled={currentIndex === 0}
+            className={`rounded px-4 py-2 font-bold text-white transition-colors ${
+              currentIndex === 0
+                ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-500"
+            }`}
+          >
+            Previous
+          </button>
+          
+          {/* Restart Test Button */}
+          <button
+            onClick={loadQuestions}
+            className="rounded bg-yellow-600 px-4 py-2 font-bold text-white transition-colors hover:bg-yellow-500"
+          >
+            Restart Test
+          </button>
+          
+          {/* Next Button */}
+          <button
+            onClick={nextQuestion}
+            disabled={currentIndex === questions.length - 1}
+            className={`rounded px-4 py-2 font-bold text-white transition-colors ${
+              currentIndex === questions.length - 1
+                ? "bg-gray-300 text-gray-700 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-500"
+            }`}
+          >
+            Next
+          </button>
+        </div>
       </div>
-
-      {/* Restart Test Button */}
-      <div className="mt-6 text-center">
-        <button
-          onClick={loadQuestions}
-          className="rounded bg-red-600 px-6 py-2 font-bold text-white transition-colors hover:bg-red-500"
-        >
-          Restart Test
-        </button>
-      </div>
+      
+      {/* Add bottom padding to prevent content from being hidden behind fixed navigation */}
+      <div className="h-20"></div>
     </div>
   );
 }
